@@ -3,7 +3,7 @@ import "./Navbaraccueuil.css"
 import Logo from "./Logo.jpg";
 import concert from "./img/concert.png";
 import serveur from "./img/burger.png";
-import a_votre_santé from "./img/a-votre-sante.png";
+import a_Votre_Santé from "./img/a-votre-sante.png";
 import inscri from "./img/contracter.png";
 
 import {Link} from "react-router-dom"

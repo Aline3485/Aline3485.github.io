@@ -1,8 +1,8 @@
-import React from 'react'
-import { BrowserRouter, Router } from 'react-router-dom';
-import Accueil from './Accueil';
-import './App.css';
-import Navbaraccueuil from './Navbaraccueuil';
+import React from "react"
+import { BrowserRouter, Router } from "react-router-dom";
+import Accueil from "./Accueil";
+import "./App.css";
+import Navbaraccueuil from "./Navbaraccueuil";
 import Video from "./video/Projet2.mp4";
 
 

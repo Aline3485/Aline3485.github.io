@@ -1,6 +1,6 @@
-import React from 'react'
-import Logo from './img/logoacceuil.png'
-import './Accueil.css'
+import React from "react"
+import Logo from "./img/logoacceuil.png"
+import "./Accueil.css"
 
 
 function Accueil() {
@@ -18,4 +18,4 @@ function Accueil() {
   )
 }
 
-export default Accueil
+export default Accueil;
