@@ -1,13 +1,12 @@
-import React from "react"
-import Navbar from "../Navbaraccueuil"
+import React from "react";
+import Navbar from "../Navbaraccueuil";
 
-
- const Bar = () => {
+function Bar() {
   return (
     <div>
       <Navbar />
     </div>
   );
-};
+}
 
 export default Bar;

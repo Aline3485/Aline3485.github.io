@@ -1,12 +1,12 @@
-import React from "react"
-import Navbar from "../Navbaraccueuil"
+import React from "react";
+import Navbar from "../Navbaraccueuil";
 
- const Resto = () => {
+function Resto() {
   return (
     <div>
       <Navbar />
     </div>
   );
-};
+}
 
 export default Resto;

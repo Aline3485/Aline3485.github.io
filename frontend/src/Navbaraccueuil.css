@@ -7,7 +7,6 @@
   animation-name: Opacity;
   animation-iteration-count: 1;
   animation-duration: 8s;
-  
 }
 
 .liste {
@@ -20,9 +19,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-  
 }
-
 
 .logo {
   margin-bottom: 20px;
@@ -48,8 +45,8 @@
   height: 90%;
   transition-duration: 0.4s;
   display: flex;
-  align-items: center;}
-
+  align-items: center;
+}
 
 .link:hover {
   height: 100%;

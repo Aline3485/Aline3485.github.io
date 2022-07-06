@@ -1,12 +1,17 @@
-import Home from "@pages/Home";
-
+import React from "react";
+import Accueil from "./Accueil";
 import "./App.css";
+import Navbaraccueuil from "./Navbaraccueuil";
+import Video from "./video/Projet2.mp4";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <video className="background-video" autoPlay={true} loop muted={true}>
+        <source src={Video} type="video/mp4" />
+      </video>
+      <Navbaraccueuil />
+      <Accueil />
     </div>
   );
 }
