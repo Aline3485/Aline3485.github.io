@@ -1,7 +1,7 @@
 import React from "react";
 import Accueil from "./Accueil.jsx";
 import "./App.css";
-import Navbaraccueuil from "./Navbaraccueuil.jsx";
+import Navbaraccueuil from "./Nav-Bar/Navbaraccueuil.jsx";
 import Video from "./video/Projet2.mp4";
 
 function App() {
