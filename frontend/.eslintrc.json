@@ -3,7 +3,8 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
+  "root": true,
+    "extends": [
     "plugin:react/recommended",
     "airbnb",
     "plugin:prettier/recommended"
