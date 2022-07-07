@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "./Logo.jpg";
 import concert from "./img/concert.png";
 import hamburger from "./img/burger.png";
-import aVotreSante from "./img/a-votre-sante.png";
+import verre from "./img/a-votre-sante.png";
 import contact from "./img/contacter.png";
 import "./navbar.css";
 
@@ -15,7 +15,7 @@ export function Navbar() {
           <img src={concert} alt="" className="icon" />
         </Link>
         <Link className="lin" to="./bar/Bar">
-          <img src={aVotreSante} alt="" className="icon" />
+          <img src={verre} alt="" className="icon" />
         </Link>
         <Link className="lin" to="./">
           <img src={Logo} alt="" className="logo" />

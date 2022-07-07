@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
 import "./Navbaraccueuil.css";
+import { Link } from "react-router-dom";
 import Logo from "./Logo.jpg";
 import concert from "./img/concert.png";
 import hamburger from "./img/burger.png";
-import a_Votre_Santé from "./img/a-votre-sante.png";
+import verre from "./img/verre.png";
 import contact from "./img/contacter.png";
-
-import { Link } from "react-router-dom";
 
 function Navbaraccueuil() {
   return (
@@ -23,7 +21,7 @@ function Navbaraccueuil() {
           <img src={concert} alt="" className="icone" />
         </Link>
         <Link className="link" to="./evenement/event">
-          <img src={a_Votre_Santé} alt="" className="icone" />
+          <img src={verre} alt="" className="icone" />
         </Link>
         <Link className="link" to="./">
           <img src={Logo} alt="" className="logo" />
