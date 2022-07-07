@@ -1,6 +1,6 @@
 import React from "react";
 
-function DisplayList({events}) {
+function DisplayList({ events }) {
   console.log("events", events);
   return (
     <div className="DisplayList">
