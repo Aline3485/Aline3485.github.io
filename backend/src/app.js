@@ -2,17 +2,18 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DisplayList from "./components/DisplayList";
 import "./App.css";
-const sampleMusic = {
-  fields: {
-    title: "Blabla concert",
-    date_description: "dans l'été",
-    address_name: "chez moi",
-    address_street: "toujours chez moi",
-    price_type: "gratosh!!!",
-    image:
-      "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FComicBookGuy.png?1497567511970",
-  },
-};
+
+// const sampleMusic = {
+//   fields: {
+//     title: "Blabla concert",
+//     date_description: "dans l'été",
+//     address_name: "chez moi",
+//     address_street: "toujours chez moi",
+//     price_type: "gratosh!!!",
+//     image:
+//       "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FComicBookGuy.png?1497567511970",
+//   },
+// };
 
 function App() {
   const [events, setEvents] = useState([]);
