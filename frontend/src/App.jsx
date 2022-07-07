@@ -7,7 +7,7 @@ import Video from "./video/Projet2.mp4";
 function App() {
   return (
     <div className="App">
-      <video className="background-video" autoPlay={true} loop muted={true}>
+      <video className="background-video" autoPlay loop muted>
         <source src={Video} type="video/mp4" />
       </video>
       <Navbaraccueuil />
@@ -15,5 +15,6 @@ function App() {
     </div>
   );
 }
+// autoPlay={true} loop muted={true}   code original qui ressort en erreur
 
 export default App;
