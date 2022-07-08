@@ -11,19 +11,19 @@ function Navbar() {
   return (
     <nav>
       <ul className="list">
-        <Link className="lin" to="./evenement/event">
+        <Link className="lin" to="/event">
           <img src={concert} alt="" className="icon" />
         </Link>
-        <Link className="lin" to="./bar/Bar">
+        <Link className="lin" to="/bar">
           <img src={aVotreSanté} alt="" className="icon" />
         </Link>
-        <Link className="lin" to="./">
+        <Link className="lin" to="/">
           <img src={Logo} alt="" className="logo" />
         </Link>
-        <Link className="lin" to="./resto/Resto">
+        <Link className="lin" to="/restaurants">
           <img src={serveur} alt="" className="icon" />
         </Link>
-        <Link className="lin" to="./uber/event">
+        <Link className="lin" to="/contact">
           <img src={inscri} alt="" className="icon" />
         </Link>
       </ul>

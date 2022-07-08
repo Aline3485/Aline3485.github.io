@@ -4,6 +4,7 @@ import "./App.css";
 import Navbaraccueuil from "./Navbaraccueuil";
 import Video from "./video/Projet2.mp4";
 
+
 function App() {
   return (
     <div className="App">
@@ -12,6 +13,8 @@ function App() {
       </video>
       <Navbaraccueuil />
       <Accueil />
+      
+      
     </div>
   );
 }

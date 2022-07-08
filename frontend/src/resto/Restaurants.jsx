@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Nav-Bar/Navbar.jsx";
 
-function Bar() {
+function Restaurants() {
   return (
     <div>
       <Navbar />
@@ -9,4 +9,4 @@ function Bar() {
   );
 }
 
-export default Bar;
+export default Restaurants;
