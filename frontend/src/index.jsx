@@ -4,18 +4,19 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Event from "./components/evenement/event";
-import Resto from "./components/restaurants/restaurant";
+import Restaurant from "./components/restaurants/restaurant.jsx";
+import Bar from "./components/bar/bar.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+        <Route path="/event" element={<Event />} />
+        <Route path="/bar" element={<Bar/>} />
         <Route path="/" element={<App />} />
-        <Route path="/evenement/event" element={<Event />} />
-        {/* <Route path="bars/bar" element={} /> */}
-        <Route path="/restaurants/restaurant" element={<Resto />} />
-        {/* <Route path="" element={} /> */}
+        <Route path="/restaurants" element={<Restaurant />} />
+        {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
