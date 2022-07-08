@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../../Nav-Bar/Navbaraccueuil.jsx";
+import Navbar from "../../Nav-Bar/navbar.jsx";
 import "./restaurant.css";
 
-function Resto() {
+function Restaurant() {
   return (
     <div>
       <Navbar />
@@ -10,4 +10,4 @@ function Resto() {
   );
 }
 
-export default Resto;
+export default Restaurant;
