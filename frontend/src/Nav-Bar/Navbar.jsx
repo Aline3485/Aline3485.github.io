@@ -4,7 +4,7 @@ import Logo from "./Logo.jpg";
 import concert from "./img/concert.png";
 import serveur from "./img/burger.png";
 import aVotreSanté from "./img/a-votre-sante.png";
-import inscri from "./img/contracter.png";
+import inscri from "./img/contacter.png";
 import "./Navbar.css";
 
 function Navbar() {

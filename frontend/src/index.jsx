@@ -20,5 +20,5 @@ root.render(
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

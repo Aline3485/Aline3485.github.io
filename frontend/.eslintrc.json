@@ -23,7 +23,7 @@
     "prettier/prettier": 0,
     "no-console": "off",
     "indent": "error",
-    "quotes": ["double"],
+    "quotes": 0,
     "no-restricted-syntax": [
       "error",
       {

@@ -13,7 +13,7 @@ function Navbaraccueuil() {
       {/* <ul className="liste">
                         <li className='items' >🎤</li>
                         <li className='items'>🍻</li>
-                         <img className="logo" src={Logo} alt=""/> 
+                         <img className="logo" src={Logo} alt=""/>
                         <li className='items'>🍔</li>
                         <li className='items'>🚖</li>
                 </ul> */}

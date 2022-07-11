@@ -1,45 +1,72 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Navbar from "./Nav-Bar/Navbar";
-
+import Logo from "./img/logoacceuil.png";
+import "./contact.css";
 
 function Contact() {
-  const [input, setInput] = useState()
+  const [firstname, setFirstname] = useState();
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [inputs, setInputs] = useState();
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    // eslint-disable-next-line no-alert
     alert("Thx for submit, see you later!");
-  }
+    setFirstname("");
+    setName("");
+    setEmail("");
+    setInputs("");
+  };
+
   return (
-    <div>
-    <Navbar />
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="firstname">
-        Nom :
-        <input type="text" value={input} onChange={event => setInput(event.target.value)} />
-      </label>
-      <input type="submit" value="Envoyer" />
-    </form>
-    </div>);
+    <>
+      <Navbar />
+      <div className="cubeContainer">
+        <img className="cube" src={Logo} alt="icone" />
+      </div>
+
+      <div className="formContainer">
+        <form className="form" onSubmit={handleSubmit}>
+          <label className="formName" htmlFor="name">
+            Nom :
+            <input
+              type="text"
+              value={name}
+              placeholder="doe"
+              onChange={(event) => setName(event.target.value)}
+            />
+          </label>
+          <label className="formFirstname" htmlFor="firstname">
+            Prénom :
+            <input
+              type="text"
+              value={firstname}
+              placeholder="john"
+              onChange={(event) => setFirstname(event.target.value)}
+            />
+          </label>
+          <label className="formEmail" htmlFor="email">
+            Email :
+            <input
+              type="text"
+              value={email}
+              placeholder="prenom.nom@email.com"
+              onChange={(event) => setEmail(event.target.value)}
+            />
+          </label>
+          Commentaires:
+          <textarea
+            className="textarea"
+            value={inputs}
+            placeholder="vos commentaires"
+            onChange={(event) => setInputs(event.target.value)}
+          />
+          <input className="subButton" type="submit" value="Envoyer" />
+        </form>
+      </div>
+    </>
+  );
 }
-{/* <div class="container">
-  <h1>Formulaire de contact</h1>
-  <form action="/action_page.php">
-    <label for="fname">Nom & prénom</label>
-    <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom">
-
-    <label for="sujet">Sujet</label>
-    <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message">
-
-    <label for="emailAddress">Email</label>
-    <input id="emailAddress" type="email" name="email" placeholder="Votre email">
-
-
-    <label for="subject">Message</label>
-    <textarea id="subject" name="subject" placeholder="Votre message" style="height:200px"></textarea>
-
-    <input type="submit" value="Envoyer">
-  </form>
-</div> */}
 
 export default Contact;
