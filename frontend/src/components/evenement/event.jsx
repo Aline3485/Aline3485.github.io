@@ -1,5 +1,6 @@
+/* eslint-disable import/no-named-as-default */
+/* eslint-disable import/no-unresolved */
 import React from "react";
-// eslint-disable-next-line import/no-named-as-default
 import Navbar from "../../Nav-Bar/navbar";
 
 function Event() {

@@ -1,3 +1,6 @@
+/* eslint-disable import/no-named-as-default-member */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-named-as-default */
 import React, { useState } from "react";
 import Navbar from "./Nav-Bar/Navbar";
 import Logo from "./img/logoacceuil.png";

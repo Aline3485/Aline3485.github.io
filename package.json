@@ -25,30 +25,8 @@
     "xo": "^0.50.0"
   },
   "dependencies": {
-<<<<<<< HEAD
     "axios": "^0.27.2",
     "eslint": "^8.18.0",
     "react-router-dom": "^6.3.0"
   }
-=======
-    "builtin-modules": "^1.1.1",
-    "eslint-formatter-pretty": "^4.1.0",
-    "lodash.cond": "^4.2.0",
-    "lodash.find": "^4.2.0",
-    "pkg-up": "^1.0.0",
-    "react-router-dom": "^6.3.0"
-  },
-  "optionalDependencies": {
-    "lodash.isarray": "^4.0.0"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0"
-  },
-  "bundledDependencies": [
-    "@generated/foo"
-  ],
-  "bundleDependencies": [
-    "@generated/foo"
-  ]
->>>>>>> 133fa75c70cd834e1b47e46c7713d2e17f514bfc
 }

@@ -15,27 +15,16 @@ export function Navbar() {
           <img src={concert} alt="" className="icon" />
         </Link>
         <Link className="lin" to="/bar">
-<<<<<<< HEAD
           <img src={verre} alt="" className="icon" />
-=======
-          <img src={aVotreSanté} alt="" className="icon" />
->>>>>>> 133fa75c70cd834e1b47e46c7713d2e17f514bfc
         </Link>
         <Link className="lin" to="/">
           <img src={Logo} alt="" className="logo" />
         </Link>
         <Link className="lin" to="/restaurants">
-<<<<<<< HEAD
           <img src={hamburger} alt="" className="icon" />
         </Link>
         <Link className="lin" to="/contact">
           <img src={contact} alt="" className="icon" />
-=======
-          <img src={serveur} alt="" className="icon" />
-        </Link>
-        <Link className="lin" to="/contact">
-          <img src={inscri} alt="" className="icon" />
->>>>>>> 133fa75c70cd834e1b47e46c7713d2e17f514bfc
         </Link>
       </ul>
     </nav>
