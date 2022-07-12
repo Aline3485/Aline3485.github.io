@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import React, { useState } from "react";
 // eslint-disable-next-line import/no-named-as-default
-import Navbar from "../../Nav-Bar/navbar";
+import Navbar from "../../Nav-Bar/Navbar";
 import Logo from "../../img/logoaccueil.png";
 import "./contact.css";
 

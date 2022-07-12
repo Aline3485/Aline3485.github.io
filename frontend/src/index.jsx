@@ -17,7 +17,7 @@ root.render(
         <Route path="/event" element={<Event />} />
         <Route path="/bar" element={<Bar />} />
         <Route path="/" element={<App />} />
-        <Route path="/inscriptions/inscription" element={<Inscription />} />
+        <Route path="/inscription" element={<Inscription />} />
         <Route path="/contact" element={<Contact />} />
         {/* <Route path="" element={} /> */}
       </Routes>

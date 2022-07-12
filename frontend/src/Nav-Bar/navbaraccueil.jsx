@@ -2,9 +2,10 @@ import "./navbaraccueil.css";
 import { Link } from "react-router-dom";
 import Logo from "./Logo.jpg";
 import concert from "./img/concert.png";
-import hamburger from "./img/burger.png";
-import verre from "./img/verre.png";
 import contact from "./img/contacter.png";
+// eslint-disable-next-line import/no-unresolved
+import inscription from "./img/ajouter-le-fichier.png";
+import food from "./img/food.png";
 
 function Navbaraccueil() {
   return (
@@ -13,14 +14,14 @@ function Navbaraccueil() {
         <Link className="link" to="/event">
           <img src={concert} alt="" className="icone" />
         </Link>
-        <Link className="link" to="./bars/bar">
-          <img src={verre} alt="" className="icone" />
+        <Link className="link" to="./bar">
+          <img src={food} alt="" className="icone" />
         </Link>
         <Link className="link" to="/accueil">
           <img src={Logo} alt="" className="logo" />
         </Link>
-        <Link className="link" to="/inscriptions/inscription">
-          <img src={hamburger} alt="" className="icone" />
+        <Link className="link" to="/inscription">
+          <img src={inscription} alt="" className="icone" />
         </Link>
         <Link className="link" to="/contact">
           <img src={contact} alt="" className="icone" />
