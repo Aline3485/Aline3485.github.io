@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../Nav-Bar/navbar.";
+import Navbar from "../../Nav-Bar/navbar";
 import "./restaurant.css";
 import Video from "../../video/restaurantvideo.mp4";
 

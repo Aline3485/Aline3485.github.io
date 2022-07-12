@@ -7,7 +7,7 @@ import verre from "./img/verre.png";
 import contact from "./img/contacter.png";
 import "./navbar.css";
 
-export function Navbar() {
+function Navbar() {
   return (
     <nav>
       <ul className="list">

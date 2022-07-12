@@ -4,8 +4,8 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Event from "./components/evenement/event";
-import Restaurant from "./components/restaurants/restaurant.jsx";
-import Bar from "./components/bar/Bar.jsx";
+import Restaurant from "./components/restaurants/restaurant";
+import Bar from "./components/bar/Bar";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
