@@ -14,61 +14,61 @@ function Inscription() {
         <div className="formulaire">
           <div className="case">
             <label>Nom</label>
-            <input type="text" name="LastName" />
+            <input className="inputInscription" type="text" name="LastName" />
           </div>
           <div className="case">
             <label>Prénom</label>
-            <input type="text" name="firstName" />
+            <input className="inputInscription" type="text" name="firstName" />
           </div>
         </div>
         <div className="formulaire">
           <div className="case">
             <label>Votre email</label>
-            <input type="email" />
+            <input className="inputInscription" type="email" />
           </div>
           <div className="case">
             <label>Nom de votre événement</label>
-            <input type="text" name="eventName" />
+            <input className="inputInscription" type="text" name="eventName" />
           </div>
         </div>
         <div className="formulaire">
           <div className="case">
             <label>Ville</label>
-            <input type="text" name="pseudo" />
+            <input className="inputInscription" type="text" name="pseudo" />
           </div>
           <div className="case">
             <label>Code postal</label>
-            <input type="text" name="pseudo" />
+            <input className="inputInscription" type="text" name="pseudo" />
           </div>
         </div>
         <div className="formulaire">
           <div className="case">
             <label>Rue</label>
-            <input type="text" name="pseudo" />
+            <input className="inputInscription" type="text" name="pseudo" />
           </div>
           <div className="case">
             <label>Numero de rue</label>
-            <input type="text" name="pseudo" />
+            <input className="inputInscription" type="text" name="pseudo" />
           </div>
         </div>
         <div className="formulaire">
           <div className="case">
             <label>Prix</label>
-            <input type="text" name="pseudo" />
+            <input className="inputInscription" type="text" name="pseudo" />
           </div>
           <div className="case">
             <label>Nbr de visiteurs Max</label>
-            <input type="number" />
+            <input className="inputInscription" type="number" />
           </div>
         </div>
         <div className="formulaire">
           <div className="case">
             <label>Date</label>
-            <input type="text" name="LastName" />
+            <input className="inputInscription" type="text" name="LastName" />
           </div>
           <div className="case">
             <label>Horaire</label>
-            <input type="tet" name="LastName" />
+            <input className="inputInscription" type="tet" name="LastName" />
           </div>
         </div>
         <div className="case">
