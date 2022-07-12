@@ -1,13 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "./Logo.jpg";
-import concert from "./img/concert.png";
-import hamburger from "./img/burger.png";
-import verre from "./img/verre.png";
-import contact from "./img/contacter.png";
-import "./navbar.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Logo from './Logo.jpg';
+import concert from './img/concert.png';
+import hamburger from './img/burger.png';
+import verre from './img/verre.png';
+import contact from './img/contacter.png';
+import './Navbar.css';
 
-export function Navbar() {
+function Navbar() {
   return (
     <nav>
       <ul className="list">

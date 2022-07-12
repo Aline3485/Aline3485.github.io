@@ -1,6 +1,6 @@
-import React from "react";
-import Navbar from "../../Nav-Bar/navbar.jsx";
-import "./restaurant.css";
+import React from 'react';
+import Navbar from '../../Nav-Bar/Navbar';
+import './restaurant.css';
 
 function Restaurant() {
   return (

@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import DetailsContext from '../context/DetailsContext';
 
-function DisplayList({ events }) {
-  console.log("events", events);
+function DisplayList() {
+  const { events } = useContext(DetailsContext);
   return (
     <div className="DisplayList">
-      {events &&
-        events.map((el, id) => (
-          <div key={id}>
-            <h1>{el.name}</h1>
-            <p>Description :{el.description}</p>
-            {/* <p>
-                Adresse :{el.fields.address_name} {" "}
-                {el.fields.address_street}
-              </p>
-              <p>Prix :{el.fields.price_type}</p> */}
-          </div>
-        ))}
+      {events && events.map((event) => (
+        <div key={event.id}>
+          <h1>{event.name}</h1>
+          <Link to={`/eventquard/${event.id}`}>
+            {event.images
+              .filter((image) => image.height === 115)
+              .map((newUrl) => (
+                <img key={newUrl.id} src={newUrl.url} alt="" />
+              ))}
+          </Link>
+        </div>
+      ))}
     </div>
   );
 }
