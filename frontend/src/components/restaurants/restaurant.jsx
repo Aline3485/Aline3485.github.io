@@ -5,7 +5,7 @@ import './restaurant.css';
 function Restaurant() {
   const newLocal = (
     <video className="background-video" autoPlay loop muted>
-      <source src={Video} type="video/mp4" />
+      <source src="././video/restaurantvideo.mp4" type="video/mp4" />
     </video>
   );
   return (

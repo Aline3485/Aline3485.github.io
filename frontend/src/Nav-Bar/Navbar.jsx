@@ -5,7 +5,7 @@ import concert from './img/concert.png';
 import hamburger from './img/burger.png';
 import verre from './img/verre.png';
 import contact from './img/contacter.png';
-import './Navbar.css';
+import './navbar.css';
 
 function Navbar() {
   return (

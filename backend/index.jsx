@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import App from './src/app';
-import DisplayList from './src/components/DisplayList';
-import EventQuard from './src/components/EventQuard';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import App from "./src/app";
+import DisplayList from "./src/components/DisplayList";
+import EventQuard from "./src/components/EventQuard";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
@@ -15,5 +15,5 @@ root.render(
         <Route path="/eventquard/:eventId" element={<EventQuard />} />
       </Routes>
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
