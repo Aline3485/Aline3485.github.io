@@ -1,4 +1,4 @@
-import "../Nav-Bar/navbaraccueil.css";
+import "./navbaraccueil.css";
 import { Link } from "react-router-dom";
 import Logo from "./Logo.jpg";
 import concert from "./img/concert.png";

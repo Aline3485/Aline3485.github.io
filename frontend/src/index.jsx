@@ -4,8 +4,9 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Event from "./components/evenement/event";
-import Restaurant from "./components/restaurants/restaurant.jsx";
-import Bar from "./components/bar/bar.jsx";
+import Restaurant from "./components/restaurants/restaurant";
+import Bar from "./components/bar/Bar";
+import Contact from "./components/contact/contact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,10 +14,10 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/event" element={<Event />} />
-        <Route path="/bar" element={<Bar/>} />
+        <Route path="/bar" element={<Bar />} />
         <Route path="/" element={<App />} />
         <Route path="/restaurants" element={<Restaurant />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
