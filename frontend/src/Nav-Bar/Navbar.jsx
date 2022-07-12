@@ -7,20 +7,20 @@ import verre from "./img/verre.png";
 import contact from "./img/contacter.png";
 import "./Navbar.css";
 
-export function Navbar() {
+function Navbar() {
   return (
     <nav>
       <ul className="list">
         <Link className="lin" to="/event">
           <img src={concert} alt="" className="icon" />
         </Link>
-        <Link className="lin" to="/bar">
+        <Link className="lin" to="./bars/bar">
           <img src={verre} alt="" className="icon" />
         </Link>
         <Link className="lin" to="/">
           <img src={Logo} alt="" className="logo" />
         </Link>
-        <Link className="lin" to="/restaurants">
+        <Link className="lin" to="/inscriptions/inscription">
           <img src={hamburger} alt="" className="icon" />
         </Link>
         <Link className="lin" to="/contact">
