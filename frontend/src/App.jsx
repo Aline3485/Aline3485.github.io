@@ -1,8 +1,8 @@
-import React from 'react';
-import Accueil from './Accueil';
-import './App.css';
-import Navbaraccueil from './Nav-Bar/navbaraccueil';
-import Video from './video/Projet2.mp4';
+import React from "react";
+import Accueil from "./Accueil";
+import "./App.css";
+import Navbaraccueil from "./Nav-Bar/navbaraccueil";
+import Video from "./video/Projet2.mp4";
 
 function App() {
   return (

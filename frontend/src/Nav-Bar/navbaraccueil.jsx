@@ -1,11 +1,11 @@
-import React from 'react';
-import './navbaraccueil.css';
-import { Link } from 'react-router-dom';
-import Logo from './Logo.jpg';
-import concert from './img/concert.png';
-import hamburger from './img/burger.png';
-import verre from './img/verre.png';
-import contact from './img/contacter.png';
+import React from "react";
+import "./navbaraccueil.css";
+import { Link } from "react-router-dom";
+import Logo from "./Logo.jpg";
+import concert from "./img/concert.png";
+import hamburger from "./img/burger.png";
+import verre from "./img/verre.png";
+import contact from "./img/contacter.png";
 
 function Navbaraccueil() {
   return (
