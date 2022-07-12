@@ -1,7 +1,6 @@
-import React from "react";
-import Navbar from "../../Nav-Bar/navbar";
-import "./restaurant.css";
-import Video from "../../video/restaurantvideo.mp4";
+import React from 'react';
+import Navbar from '../../Nav-Bar/Navbar';
+import './restaurant.css';
 
 function Restaurant() {
   const newLocal = (

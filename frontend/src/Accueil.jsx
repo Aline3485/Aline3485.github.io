@@ -1,6 +1,6 @@
-import React from "react";
-import Logo from "./img/logoaccueil.png";
-import "./Accueil.css";
+import React from 'react';
+import Logo from './img/logoaccueil.png';
+import './Accueil.css';
 
 function Accueil() {
   return (
