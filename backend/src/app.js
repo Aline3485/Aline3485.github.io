@@ -17,9 +17,7 @@ import "./App.css";
 
 function App() {
   const [events, setEvents] = useState([]);
-  useEffect (
-    () =>  {
-
+  useEffect(() => {
     axios
       .get(
         "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=FR&locale=*&city=Paris&segmentName=Music&apikey=GbGBJquA3zcjVAQzPaqXnz3EWgg1BK9f"
@@ -30,16 +28,13 @@ function App() {
       .then((data) => {
         console.log("test", data);
         setEvents(data);
-
-      })}, [])
+      });
+  }, []);
 
   return (
     <div className="App">
       <>
-
-      <DisplayList events={events} />
-
-
+        <DisplayList events={events} />
       </>
     </div>
   );

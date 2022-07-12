@@ -1,7 +1,8 @@
 import React from "react";
-import Accueil from "./Accueil.jsx";
+import Accueil from "./Accueil";
 import "./App.css";
-import Navbaraccueil from "./Nav-bar/navbaraccueil.jsx";
+// eslint-disable-next-line import/no-unresolved
+import Navbaraccueil from "./Nav-bar/navbaraccueil";
 import Video from "./video/Projet2.mp4";
 
 function App() {

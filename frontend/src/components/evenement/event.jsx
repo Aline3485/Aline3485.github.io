@@ -1,5 +1,6 @@
 import React from "react";
-import Navbar from "../../Nav-Bar/navbar.jsx";
+// eslint-disable-next-line import/no-named-as-default
+import Navbar from "../../Nav-Bar/navbar";
 
 function Event() {
   return (
