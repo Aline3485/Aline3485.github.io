@@ -16,9 +16,13 @@ root.render(
         <Route path="/event" element={<Event />} />
         <Route path="/bar" element={<Bar />} />
         <Route path="/" element={<App />} />
+<<<<<<< HEAD
         <Route path="/restaurants" element={<Restaurant />} />
+=======
+        <Route path="/restaurants" element={<Restaurants />} />
+>>>>>>> 133fa75c70cd834e1b47e46c7713d2e17f514bfc
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
