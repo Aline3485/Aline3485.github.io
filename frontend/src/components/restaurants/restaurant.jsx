@@ -2,13 +2,12 @@ import React from "react";
 import Navbar from "../../Nav-Bar/navbar.";
 import "./restaurant.css";
 import Video from "../../video/restaurantvideo.mp4";
+
 function Restaurant() {
   const newLocal = (
     <video className="background-video" autoPlay loop muted>
       <source src={Video} type="video/mp4" />
     </video>
-
-    
   );
   return (
     <div>
