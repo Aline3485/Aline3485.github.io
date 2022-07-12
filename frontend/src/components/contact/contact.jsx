@@ -32,6 +32,7 @@ function Contact() {
           <label className="formName" htmlFor="name">
             Nom :
             <input
+              className="inputContact"
               type="text"
               value={name}
               placeholder="doe"
@@ -41,6 +42,7 @@ function Contact() {
           <label className="formFirstname" htmlFor="firstname">
             Prénom :
             <input
+              className="inputContact"
               type="text"
               value={firstname}
               placeholder="john"
@@ -50,6 +52,7 @@ function Contact() {
           <label className="formEmail" htmlFor="email">
             Email :
             <input
+              className="inputContact"
               type="text"
               value={email}
               placeholder="prenom.nom@email.com"
@@ -58,12 +61,12 @@ function Contact() {
           </label>
           Commentaires:
           <textarea
-            className="textarea"
+            className="textareaContact"
             value={inputs}
             placeholder="vos commentaires"
             onChange={(event) => setInputs(event.target.value)}
           />
-          <input className="subButton" type="submit" value="Envoyer" />
+          <input className="buttonContact" type="submit" value="Envoyer" />
         </form>
       </div>
     </>

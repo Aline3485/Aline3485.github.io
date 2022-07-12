@@ -26,9 +26,9 @@
   flex-direction: column;
 }
 
-input,
-textarea,
-.subButton {
+.inputContact,
+.textareaContact,
+.buttonContact {
   font-family: "Open Sans", sans-serif;
   margin: 4px;
 }
