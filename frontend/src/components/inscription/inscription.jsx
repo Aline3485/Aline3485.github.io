@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
 import Navbar from "../../Nav-Bar/Navbar";
-import "./bar.css";
+import "./inscription.css";
 
-function Bar() {
+function Inscription() {
   return (
     <div>
       <div className=" barbody">
@@ -87,4 +87,4 @@ function Bar() {
   );
 }
 
-export default Bar;
+export default Inscription;

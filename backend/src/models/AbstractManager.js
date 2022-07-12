@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 // class AbstractManager {
 //   constructor(connection, table) {
 //     this.connection = connection;

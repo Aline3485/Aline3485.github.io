@@ -1,6 +1,5 @@
 import React from "react";
-import Navbar from "../../Nav-Bar/Navbaraccueuil.jsx";
-import "./restaurant.css";
+import Navbar from "../../Nav-Bar/Navbaraccueuil";
 
 function Resto() {
   return (
