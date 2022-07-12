@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
+/* eslint-disable no-shadow */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable quotes */
 import React, { useState, useEffect } from "react";
