@@ -1,7 +1,7 @@
 import React from "react";
 import Accueil from "./Accueil";
 import "./App.css";
-import Navbaraccueuil from "./Nav-Bar/Navbaraccueuil";
+import Navbaraccueil from "./Nav-Bar/navbaraccueil";
 import Video from "./video/Projet2.mp4";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <video className="background-video" autoPlay loop muted>
         <source src={Video} type="video/mp4" />
       </video>
-      <Navbaraccueuil />
+      <Navbaraccueil />
       <Accueil />
     </div>
   );

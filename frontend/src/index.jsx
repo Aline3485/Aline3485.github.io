@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
@@ -13,9 +14,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+        <Route path="/event" element={<Event />} />
+        <Route path="/bar" element={<Bar />} />
         <Route path="/" element={<App />} />
-        <Route path="/evenement/event" element={<Event />} />
-        <Route path="bars/bar" element={<Bar />} />
         <Route path="/inscriptions/inscription" element={<Inscription />} />
         {/* <Route path="" element={} /> */}
       </Routes>
