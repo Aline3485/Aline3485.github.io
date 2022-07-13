@@ -2,7 +2,7 @@ import "./navbaraccueil.css";
 import { Link } from "react-router-dom";
 import Logo from "./Logo.jpg";
 import concert from "./img/concert.png";
-import contact from "./img/contacter.png";
+import contact from "./img/contact.png";
 // eslint-disable-next-line import/no-unresolved
 import inscription from "./img/ajouter-le-fichier.png";
 import food from "./img/food.png";

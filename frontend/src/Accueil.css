@@ -8,7 +8,7 @@ footer {
   padding-top: 15%;
 }
 
-.cube {
+.cub {
   height: 220px;
   width: 220px;
   background: linear-gradient(45deg, rgba(1, 1, 187, 0.47), rgb(3, 4, 47));
@@ -69,7 +69,8 @@ footer {
 }
 
 @media (min-width: 700px) {
-  .cube {
+  .cub {
+    background: linear-gradient(45deg, rgba(1, 1, 187, 0.47), rgb(3, 4, 47));
     height: 350px;
     width: 350px;
   }

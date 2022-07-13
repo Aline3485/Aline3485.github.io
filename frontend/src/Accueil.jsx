@@ -5,7 +5,7 @@ import "./Accueil.css";
 function Accueil() {
   return (
     <footer>
-      <div className="cube">
+      <div className="cub">
         <div className="container">
           <div className="container-fluid">
             <img src={Logo} alt="" className="log" />
