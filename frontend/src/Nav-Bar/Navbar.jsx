@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "./Logo.jpg";
-import concert from "./img/concert.png";
-// eslint-disable-next-line import/no-unresolved
-import inscription from "./img/ajouter-le-fichier.png";
-import food from "./img/food.png";
-import contact from "./img/contacter.png";
-import "./Navbar.css";
+import Logo from "@assets/img/Logo.jpg";
+import concert from "@assets/img/concert.png";
+import hamburger from "@assets/img/burger.png";
+import verre from "@assets/img/verre.png";
+import contact from "@assets/img/contacter.png";
+import "./navbar.css";
 
 function Navbar() {
   return (

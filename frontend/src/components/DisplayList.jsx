@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import DetailsContext from "../context/DetailsContext";
+import DetailsContext from "@components/context/DetailsContext";
 import { Link } from "react-router-dom";
 
 function DisplayList() {

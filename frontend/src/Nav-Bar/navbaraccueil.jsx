@@ -1,12 +1,11 @@
 import React from "react";
 import "./navbaraccueil.css";
 import { Link } from "react-router-dom";
-import Logo from "./Logo.jpg";
-import concert from "./img/concert.png";
-import contact from "./img/contact.png";
-// eslint-disable-next-line import/no-unresolved
-import inscription from "./img/ajouter-le-fichier.png";
-import food from "./img/food.png";
+import Logo from "@assets/img/Logo.jpg";
+import concert from "@assets/img/concert.png";
+import hamburger from "@assets/img/burger.png";
+import verre from "@assets/img/verre.png";
+import contact from "@assets/img/contacter.png";
 
 function Navbaraccueil() {
   return (
@@ -25,7 +24,7 @@ function Navbaraccueil() {
         <Link className="link" to="./bar">
           <img src={food} alt="" className="icone" />
         </Link>
-        <Link className="link" to="/accueil">
+        <Link className="link" to="/">
           <img src={Logo} alt="" className="logo" />
         </Link>
         <Link className="link" to="/inscription">

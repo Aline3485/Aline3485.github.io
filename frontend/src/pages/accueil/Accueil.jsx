@@ -1,9 +1,10 @@
 import React from "react";
-import Logo from "./img/logoaccueil.png";
+import Logo from "@assets/img/logoaccueil.png";
 import "./Accueil.css";
 
 function Accueil() {
   return (
+    
     <footer>
       <div className="cub">
         <div className="container">
