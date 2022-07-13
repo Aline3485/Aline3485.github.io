@@ -6,10 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Bar from "./components/bar/bar";
 import Event from "./components/evenement/event";
-import Inscription from "./components/inscription/inscription";
-import Contact from "./components/contact/contact";
+import Restaurant from "./components/restaurants/restaurant";
+import Bar from "./components/bar/Bar";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>

@@ -1,10 +1,9 @@
 import React from "react";
 import Navbar from "../../Nav-Bar/Navbar";
-import "./event.css";
 
 function Event() {
   return (
-    <div className=" eventbody">
+   <div className=" eventbody">
       <Navbar />
       <div className="remplissage">
         <div className="search-resultsevent">

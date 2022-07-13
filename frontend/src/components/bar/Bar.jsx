@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
 import Navbar from "../../Nav-Bar/Navbar";
-import "./bar.css";
 
 function Bar() {
   return (

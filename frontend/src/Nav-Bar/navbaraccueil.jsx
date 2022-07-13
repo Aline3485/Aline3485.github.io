@@ -1,3 +1,4 @@
+import React from "react";
 import "./navbaraccueil.css";
 import { Link } from "react-router-dom";
 import Logo from "./Logo.jpg";
@@ -10,6 +11,13 @@ import food from "./img/food.png";
 function Navbaraccueil() {
   return (
     <nav className="barnav">
+      {/* <ul className="liste">
+                        <li className='items' >🎤</li>
+                        <li className='items'>🍻</li>
+                         <img className="logo" src={Logo} alt=""/>
+                        <li className='items'>🍔</li>
+                        <li className='items'>🚖</li>
+                </ul> */}
       <ul className="liste">
         <Link className="link" to="/event">
           <img src={concert} alt="" className="icone" />
