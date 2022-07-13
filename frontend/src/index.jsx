@@ -1,11 +1,11 @@
-/* eslint-disable import/no-unresolved */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Event from "./pages/evenement/event";
-import Restaurant from "./pages/restaurants/restaurant";
+import Inscription from "@pages/inscription/inscription";
+import Contact from "@pages/contact/contact";
 import Bar from "./pages/bar/Bar";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

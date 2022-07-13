@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
 import Navbar from "../../Nav-Bar/Navbar";
 import "./inscription.css";
