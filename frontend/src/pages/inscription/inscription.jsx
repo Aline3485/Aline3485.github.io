@@ -2,8 +2,10 @@
 import React, { useState } from "react";
 import Navbar from "../../Nav-Bar/Navbar";
 import "./inscription.css";
+import { useContext } from 'react'
 
 function Inscription() {
+  const {data, setData} = useState([]);
   const [lastName, setLastName] = useState();
   const [firstName, setFirstName] = useState();
   const [email, setEmail] = useState();
@@ -19,6 +21,21 @@ function Inscription() {
   const [description, setDescription] = useState();
 
   const handleSubmit = (event) => {
+    data.push(
+      firstName,
+      lastName,
+      email,
+      nameEvent,
+      ville,
+      codePostal,
+      rue,
+      numRue,
+      price,
+      nbrVisiteur,
+      date,
+      horaire,
+      description,
+    );
     event.preventDefault();
     // eslint-disable-next-line no-alert
     alert("Votre formulaire a bien été envoyé !");
@@ -35,9 +52,12 @@ function Inscription() {
     setDate("");
     setHoraire("");
     setDescription("");
+    console.log(data)
   };
+
   return (
     <div>
+      
       <div className=" barbody">
         <Navbar />
         <div className="entete">Formulaire d'inscription</div>
@@ -180,13 +200,11 @@ function Inscription() {
             id="description"
             maxLength={200}
             value={description}
-            onChange={(event) => setDescription(event.target.value)}
-          >
-            Maxi 200 caractères
+            onChange={(event) => setDescription(event.target.value)}>
           </textarea>
         </div>
         <div className="case">
-          <button type="submit" className="btn">
+          <button type="submit" className="btn" >
             Envoyer
           </button>
         </div>

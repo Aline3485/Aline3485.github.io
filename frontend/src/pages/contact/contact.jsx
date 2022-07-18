@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../../Nav-Bar/Navbar";
-import Logo from "../../img/logoaccueil.png";
+// import Logo from "../../img/logoaccueil.png";
 import "./contact.css";
 
 function Contact() {
@@ -22,9 +22,9 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <div className="cubeContainer">
+      {/* <div className="cubeContainer">
         <img className="cube" src={Logo} alt="icone" />
-      </div>
+      </div> */}
 
       <div className="formContainer">
         <form className="form" onSubmit={handleSubmit}>

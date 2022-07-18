@@ -1,9 +1,11 @@
-import React from "react";
+import React  from "react";
 import Accueil from "./pages/accueil/Accueil";
 import "./App.css";
 import Navbaraccueil from "./Nav-Bar/navbaraccueil";
 import Video from "@assets/video/Projet2.mp4";
 import DetailsContext from "@components/context/DetailsContext";
+import { useState } from "react";
+
 function App() {
   const [events, setEvents] = useState([]);
   return (

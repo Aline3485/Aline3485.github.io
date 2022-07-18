@@ -15,13 +15,13 @@ function Navbar() {
           <img src={concert} alt="" className="icon" />
         </Link>
         <Link className="lin" to="/bar">
-          <img src={food} alt="" className="icon" />
+          <img src={hamburger} alt="" className="icon" />
         </Link>
         <Link className="lin" to="/">
           <img src={Logo} alt="" className="logo" />
         </Link>
         <Link className="lin" to="/inscription">
-          <img src={inscription} alt="" className="icon" />
+          <img src={verre} alt="" className="icon" />
         </Link>
         <Link className="lin" to="/contact">
           <img src={contact} alt="" className="icon" />

@@ -22,13 +22,13 @@ function Navbaraccueil() {
           <img src={concert} alt="" className="icone" />
         </Link>
         <Link className="link" to="./bar">
-          <img src={food} alt="" className="icone" />
+          <img src={hamburger} alt="" className="icone" />
         </Link>
         <Link className="link" to="/">
           <img src={Logo} alt="" className="logo" />
         </Link>
         <Link className="link" to="/inscription">
-          <img src={inscription} alt="" className="icone" />
+          <img src={verre} alt="" className="icone" />
         </Link>
         <Link className="link" to="/contact">
           <img src={contact} alt="" className="icone" />
