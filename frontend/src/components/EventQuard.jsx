@@ -1,12 +1,21 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import Navbar from "./../Nav-Bar/Navbar";
-import "./EventQuard.css";
+import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 
+const containerStyle = {
+  width: "400px",
+  height: "400px",
+};
 function EventQuard() {
   const [details, setDetails] = useState();
+
   const { eventId } = useParams();
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: "AIzaSyDjwD8enVQ84x6bLN_El_z_J-mp2COZmzM",
+  });
   useEffect(() => {
     axios
       .get(
@@ -21,9 +30,25 @@ function EventQuard() {
         setDetails(events[0]);
       });
   }, [eventId]);
-  return (
-    <div className="EventQuard">
-      <div className="description">
+  const center = {
+    lat: Number(details?._embedded.venues[0]?.location.latitude),
+    lng: Number(details?._embedded.venues[0]?.location.longitude),
+  };
+
+  console.log("center", center);
+  const [map, setMap] = React.useState(null);
+  const onLoad = (marker) => {
+    console.log("marker", marker);
+  };
+
+  // eslint-disable-next-line no-unused-vars
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null);
+  }, []);
+  return isLoaded ? (
+    <>
+      <Link to={"/event"}>Back </Link>
+      <div className="EventQuard">
         <h1>{details?.name}</h1>
         <h2>
           Où : {details?._embedded.venues[0].address.line1}{" "}
@@ -36,24 +61,28 @@ function EventQuard() {
           Prix : entre {details?.priceRanges[0].min} et{" "}
           {details?.priceRanges[0].max} {details?.priceRanges[0].currency}
         </h3>
-        <a className="btnbillet" href={details?.url}>site vendeur de Billets </a><br />
+        <a href={details?.url}> Billets </a>
         {details?.images
           .filter((image) => image.height === 576)
           .map((newUrl) => (
-            <img className="picture" key={newUrl.id} src={newUrl.url} alt="" />
+            <img key={newUrl.id} src={newUrl.url} alt="" />
           ))}
-        <div className="contenueevent">
-          <div className="carteevent">
-            <div className="mapevent" />
-          </div>
-          {/* <div className="navigationevent">
-            <div className="logo1" />
-            <div className="logo2" />
-            <div className="logo3" />
-          </div> */}
+        <div id="map">
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={15}
+            onUnmount={onUnmount}
+          >
+            <Marker onLoad={onLoad} position={center} />
+            {/* Child components, such as markers, info windows, etc. */}
+            <></>
+          </GoogleMap>
         </div>
       </div>
-    </div>
+    </>
+  ) : (
+    <></>
   );
 }
 

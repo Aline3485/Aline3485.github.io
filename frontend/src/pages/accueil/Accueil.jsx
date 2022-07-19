@@ -4,7 +4,6 @@ import "./Accueil.css";
 
 function Accueil() {
   return (
-    
     <footer>
       <div className="cub">
         <div className="container">

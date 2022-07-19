@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "@assets/img/Logo.jpg";
+import Logo from "@assets/img/Logo.png";
 import concert from "@assets/img/concert.png";
 import hamburger from "@assets/img/food.png";
 import inscription from "@assets/img/ajouter-le-fichier.png";
