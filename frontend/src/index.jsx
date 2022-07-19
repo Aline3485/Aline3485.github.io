@@ -4,10 +4,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import Event from "./components/evenement/event";
-import Inscription from "./components/inscription/inscription";
-import Contact from "./components/contact/contact";
-import MyProvider from "./contexts/FormContext";
+import Event from "./pages/evenement/event";
+import Inscription from "./pages/inscription/inscription";
+import Contact from "./pages/contact/contact";
+import MyProvider from "./components/context/FormContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
