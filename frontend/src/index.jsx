@@ -5,6 +5,7 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Event from "./pages/evenement/event";
+import EventQuard from "./components/EventQuard";
 import Inscription from "./pages/inscription/inscription";
 import Contact from "./pages/contact/contact";
 import MyProvider from "./components/context/FormContext";
@@ -17,6 +18,7 @@ root.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/event" element={<Event />} />
+          <Route path="/eventquard/:eventId" element={<EventQuard />}/>
           <Route path="/inscription" element={<Inscription />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
