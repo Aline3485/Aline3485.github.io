@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 
 import React, { useContext } from "react";
 import { FormContext } from "../../components/context/FormContext";
