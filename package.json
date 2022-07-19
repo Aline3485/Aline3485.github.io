@@ -18,5 +18,9 @@
     "concurrently": "^7.0.0",
     "eslint": "^8.19.0",
     "husky": "^7.0.0"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "^2.12.0",
+    "google-map-react": "^2.2.0"
   }
 }

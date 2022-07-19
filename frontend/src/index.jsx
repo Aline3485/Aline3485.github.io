@@ -6,6 +6,7 @@ import App from "./App";
 import Event from "./pages/evenement/event";
 import Restaurant from "./pages/restaurants/restaurant";
 import Bar from "./pages/bar/Bar";
+import EventQuard from "@components/EventQuard";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -14,6 +15,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/event" element={<Event />} />
+        <Route path="/eventquard/:eventId" element={<EventQuard />} />
         <Route path="/bar" element={<Bar />} />
         <Route path="/" element={<App />} />
         <Route path="/restaurants" element={<Restaurant />} />

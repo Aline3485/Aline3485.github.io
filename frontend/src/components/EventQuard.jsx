@@ -1,12 +1,20 @@
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable linebreak-style */
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 
+const containerStyle = {
+  width: "400px",
+  height: "400px",
+};
 function EventQuard() {
   const [details, setDetails] = useState();
+
   const { eventId } = useParams();
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: "AIzaSyDjwD8enVQ84x6bLN_El_z_J-mp2COZmzM",
+  });
   useEffect(() => {
     axios
       .get(
@@ -21,7 +29,21 @@ function EventQuard() {
         setDetails(events[0]);
       });
   }, [eventId]);
-  return (
+  const center = {
+    lat: Number(details?._embedded.venues[0]?.location.latitude),
+    lng: Number(details?._embedded.venues[0]?.location.longitude),
+  };
+
+  console.log('center', center);
+  const [map, setMap] = React.useState(null);
+  const onLoad = marker => {
+    console.log('marker', marker);
+  }
+
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null);
+  }, []);
+  return isLoaded ? (
     <div className="EventQuard">
       <h1>{details?.name}</h1>
       <h2>
@@ -37,12 +59,27 @@ function EventQuard() {
       </h3>
       <a href={details?.url}> Billets </a>
       {details?.images
-        .filter((image) => image.height === 683)
+        .filter((image) => image.height === 576)
         .map((newUrl) => (
           <img key={newUrl.id} src={newUrl.url} alt="" />
         ))}
+      <div id="map">
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={15}
+          onUnmount={onUnmount}
+          >
+          <Marker
+          onLoad={onLoad}
+          position={center}/>
+          {/* Child components, such as markers, info windows, etc. */}
+          <></>
+        </GoogleMap>
+        
+      </div>
     </div>
-  );
+  ):<></>
 }
 
 export default EventQuard;
