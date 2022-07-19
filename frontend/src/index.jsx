@@ -4,23 +4,24 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Event from "./pages/evenement/event";
-import Restaurant from "./pages/restaurants/restaurant";
+import Inscription from "@pages/inscription/inscription";
+import Contact from "@pages/contact/contact";
 import Bar from "./pages/bar/Bar";
 import EventQuard from "@components/EventQuard";
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode>
+<React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/event" element={<Event />} />
         <Route path="/eventquard/:eventId" element={<EventQuard />} />
         <Route path="/bar" element={<Bar />} />
         <Route path="/" element={<App />} />
-        <Route path="/restaurants" element={<Restaurant />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/inscription" element={<Inscription />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="" element={} /> */}
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>
+</React.StrictMode>
 );
