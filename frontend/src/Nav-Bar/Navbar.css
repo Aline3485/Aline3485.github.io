@@ -1,9 +1,12 @@
 nav {
   height: 50px;
   opacity: 0.8;
-  position: fixed;
+  position: absolute;
+ 
   bottom: 0px;
   width: 100%;
+  z-index: 998;
+    box-sizing: border-box;
 }
 
 .list {
@@ -47,7 +50,7 @@ nav {
 
 @media (min-width: 450px) {
   nav {
-    position: relative;
+    position: sticky;
     height: 50px;
   }
 

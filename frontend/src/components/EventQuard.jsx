@@ -23,7 +23,6 @@ function EventQuard() {
   }, [eventId]);
   return (
     <div className="EventQuard">
-      <Navbar />
       <div className="description">
         <h1>{details?.name}</h1>
         <h2>
@@ -37,7 +36,7 @@ function EventQuard() {
           Prix : entre {details?.priceRanges[0].min} et{" "}
           {details?.priceRanges[0].max} {details?.priceRanges[0].currency}
         </h3>
-        <a href={details?.url}> Billets </a>
+        <a className="btnbillet" href={details?.url}>site vendeur de Billets </a><br />
         {details?.images
           .filter((image) => image.height === 576)
           .map((newUrl) => (
