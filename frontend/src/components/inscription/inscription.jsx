@@ -1,41 +1,47 @@
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { FormContext } from "../../contexts/FormContext";
 import Navbar from "../../Nav-Bar/Navbar";
 import "./inscription.css";
 
+// créer un state initial pour le réutiliser
+const initialState = {
+  lastName: "",
+  firstName: "",
+  email: "",
+  nameEvent: "",
+  ville: "",
+  codePostal: "",
+  rue: "",
+  numRue: "",
+  price: "",
+  nbrVisiteur: "",
+  date: "",
+  horaire: "",
+  description: "",
+};
 function Inscription() {
-  const [lastName, setLastName] = useState();
-  const [firstName, setFirstName] = useState();
-  const [email, setEmail] = useState();
-  const [nameEvent, setNameEvent] = useState();
-  const [ville, setVille] = useState();
-  const [codePostal, setCodePostal] = useState();
-  const [rue, setRue] = useState();
-  const [numRue, setNumRue] = useState();
-  const [price, setPrice] = useState();
-  const [nbrVisiteur, setNbrVisiteur] = useState();
-  const [date, setDate] = useState();
-  const [horaire, setHoraire] = useState();
-  const [description, setDescription] = useState();
+  // utilisation du contexte
+  const { form, setForm } = useContext(FormContext);
+
+  function handleChange(event) {
+    // destructuration de event.target.value + event.target.name
+    const { value, name } = event.target;
+    setForm({
+      ...form,
+      // [name] correspond au champ <input  name="lastname"/>
+      [name]: value,
+    });
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // eslint-disable-next-line no-alert
     alert("Votre formulaire a bien été envoyé !");
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setNameEvent("");
-    setVille("");
-    setCodePostal("");
-    setRue("");
-    setNumRue("");
-    setPrice("");
-    setNbrVisiteur("");
-    setDate("");
-    setHoraire("");
-    setDescription("");
+    setForm(initialState);
   };
+
   return (
     <div>
       <div className=" barbody">
@@ -49,9 +55,9 @@ function Inscription() {
             <input
               className="inputInscription"
               type="text"
-              value={lastName}
-              name="LastName"
-              onChange={(event) => setLastName(event.target.value)}
+              name="lastName"
+              value={form.lastName}
+              onChange={handleChange}
             />
           </div>
           <div className="case">
@@ -60,8 +66,8 @@ function Inscription() {
               className="inputInscription"
               type="text"
               name="firstName"
-              value={firstName}
-              onChange={(event) => setFirstName(event.target.value)}
+              value={form.firstName}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -71,8 +77,8 @@ function Inscription() {
             <input
               className="inputInscription"
               type="email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
+              value={form.email}
+              onChange={handleChange}
             />
           </div>
           <div className="case">
@@ -80,9 +86,9 @@ function Inscription() {
             <input
               className="inputInscription"
               type="text"
-              name="eventName"
-              value={nameEvent}
-              onChange={(event) => setNameEvent(event.target.value)}
+              name="nameEvent"
+              value={form.nameEvent}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -93,8 +99,8 @@ function Inscription() {
               className="inputInscription"
               type="text"
               name="ville"
-              value={ville}
-              onChange={(event) => setVille(event.target.value)}
+              value={form.ville}
+              onChange={handleChange}
             />
           </div>
           <div className="case">
@@ -102,9 +108,9 @@ function Inscription() {
             <input
               className="inputInscription"
               type="text"
-              name="code"
-              value={codePostal}
-              onChange={(event) => setCodePostal(event.target.value)}
+              name="codePostal"
+              value={form.codePostal}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -115,8 +121,8 @@ function Inscription() {
               className="inputInscription"
               type="text"
               name="rue"
-              value={rue}
-              onChange={(event) => setRue(event.target.value)}
+              value={form.rue}
+              onChange={handleChange}
             />
           </div>
           <div className="case">
@@ -124,9 +130,9 @@ function Inscription() {
             <input
               className="inputInscription"
               type="text"
-              name="numrue"
-              value={numRue}
-              onChange={(event) => setNumRue(event.target.value)}
+              name="numRue"
+              value={form.numRue}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -137,8 +143,8 @@ function Inscription() {
               className="inputInscription"
               type="text"
               name="price"
-              value={price}
-              onChange={(event) => setPrice(event.target.value)}
+              value={form.price}
+              onChange={handleChange}
             />
           </div>
           <div className="case">
@@ -146,8 +152,9 @@ function Inscription() {
             <input
               className="inputInscription"
               type="number"
-              value={nbrVisiteur}
-              onChange={(event) => setNbrVisiteur(event.target.value)}
+              name="nbrVisiteur"
+              value={form.nbrVisiteur}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -158,8 +165,8 @@ function Inscription() {
               className="inputInscription"
               type="text"
               name="date"
-              value={date}
-              onChange={(event) => setDate(event.target.value)}
+              value={form.date}
+              onChange={handleChange}
             />
           </div>
           <div className="case">
@@ -168,27 +175,23 @@ function Inscription() {
               className="inputInscription"
               type="tet"
               name="horaire"
-              value={horaire}
-              onChange={(event) => setHoraire(event.target.value)}
+              value={form.horaire}
+              onChange={handleChange}
             />
           </div>
         </div>
         <div className="case">
           <label>Description</label>
           <textarea
-            name="description"
             id="description"
             maxLength={200}
-            value={description}
-            onChange={(event) => setDescription(event.target.value)}
-          >
-            Maxi 200 caractères
-          </textarea>
+            name="description"
+            value={form.description}
+            onChange={handleChange}
+          />
         </div>
         <div className="case">
-          <button type="submit" className="btn">
-            Envoyer
-          </button>
+          <input type="submit" className="btn" />
         </div>
       </form>
     </div>
