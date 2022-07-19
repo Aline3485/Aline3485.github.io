@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 
@@ -44,6 +44,8 @@ function EventQuard() {
     setMap(null);
   }, []);
   return isLoaded ? (
+    <>
+    <Link to={"/event"} >Back </Link>
     <div className="EventQuard">
       <h1>{details?.name}</h1>
       <h2>
@@ -79,7 +81,7 @@ function EventQuard() {
         
       </div>
     </div>
-  ):<></>
+    </> ):<></>
 }
 
 export default EventQuard;
