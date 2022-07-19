@@ -2,10 +2,11 @@
 import React, { useState } from "react";
 import Navbar from "../../Nav-Bar/Navbar";
 import "./inscription.css";
+// eslint-disable-next-line no-unused-vars
 import { useContext } from 'react'
 
 function Inscription() {
-  const {data, setData} = useState([]);
+  const {data} = useState([]);
   const [lastName, setLastName] = useState();
   const [firstName, setFirstName] = useState();
   const [email, setEmail] = useState();

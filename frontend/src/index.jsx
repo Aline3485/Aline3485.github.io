@@ -7,7 +7,7 @@ import Event from "./pages/evenement/event";
 import Inscription from "@pages/inscription/inscription";
 import Contact from "@pages/contact/contact";
 import Bar from "./pages/bar/Bar";
-
+import EventQuard from "@components/EventQuard";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -15,6 +15,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/event" element={<Event />} />
+        <Route path="/eventquard/:eventId" element={<EventQuard />} />
         <Route path="/bar" element={<Bar />} />
         <Route path="/" element={<App />} />
         <Route path="/inscription" element={<Inscription />} />

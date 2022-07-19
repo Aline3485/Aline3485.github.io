@@ -1,35 +1,56 @@
-.eventbody {
-  height: 100vh;
-  animation: color-change-4x 6s linear infinite alternate both;
-}
-@keyframes color-change-4x {
-  0% {
-    background: rgb(0, 0, 111);
-  }
-  33.3333% {
-    background: rgb(38, 0, 84);
-  }
-  66.666% {
-    background: rgb(220, 97, 4);
-  }
-  100% {
-    background: rgb(155, 0, 104);
-  }
-}
+
 
 .event-containerevent {
-  margin-top: 5%;
-  padding: 2%;
-
+  margin-top: 2%;
+  padding: 4%;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
+.gif{
+  width: 40px;
+  animation: heartbeat 2s ease-in-out infinite both;
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
 .search-resultsevent {
-  background-color: rgba(171, 35, 201, 0.148);
+  /* background-color: rgba(171, 35, 201, 0.148); */
   margin-top: 5%;
+  height: 95%;
   border-radius: 5%;
-  box-shadow: 0px 0px 227px -66px rgba(62, 84, 196, 0.395) inset;
+  /* box-shadow: 0px 0px 227px -66px rgba(62, 84, 196, 0.395) inset; */
   animation: bounce-in-left 1.1s 0.9s both;
 }
 @keyframes bounce-in-left {
@@ -72,7 +93,7 @@
 
 .searchevent {
   height: 20px;
-  width: 75%;
+  width: 95%;
   border: solid 2px black;
   border-radius: 5px;
   background-color: white;
@@ -84,10 +105,14 @@
 }
 .descriptionevent {
   background-color: rgb(255, 255, 255);
-  height: 150px;
-  width: 65%;
+  height: 70vh;
+  width: 90%;
+  margin-bottom: 4%;
   border-radius: 5px;
+  text-align: center;
   border: solid 2px black;
+  scroll-behavior: smooth;
+  overflow: auto;
 }
 .listevent {
   background-color: rgb(255, 255, 255);
@@ -142,39 +167,6 @@
   }
 }
 
-.carteevent {
-  height: 325px;
-  width: 325px;
-  background-color: rgba(201, 126, 35, 0.484);
-  box-shadow: 0px 0px 227px -66px rgba(62, 84, 196, 0.87) inset;
-  margin-top: 5%;
-  /* border: thick double; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-}
-
-.mapevent {
-  height: 95%;
-  width: 95%;
-  background-color: white;
-  border-radius: 100%;
-  box-shadow: 0px 0px 227px -66px rgba(0, 0, 0, 0.87) inset;
-}
-.navigationevent {
-  margin-top: 5%;
-  height: 325px;
-  width: 50px;
-  /* background-color: rgba(198, 132, 9, 0); */
-  box-shadow: 0px 0px 227px -66px rgba(198, 132, 9, 0.436) inset;
-  /* border: thick double; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 5px;
-}
 
 .logo1 {
   height: 40px;
@@ -208,23 +200,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .navigationevent {
-    height: 350px;
-    width: 350px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .navigation {
-    height: 50px;
-    width: 350px;
-    margin-top: 0%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
 }
 
 @media (min-width: 700px) {
@@ -234,23 +210,7 @@
     flex-direction: row;
     align-items: center;
   }
-  .carteevent {
-    height: 550px;
-    width: 550px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .navigationevent {
-    height: 550px;
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 5%;
-  }
 }
 
 @media (min-width: 915px) {
@@ -267,9 +227,10 @@
   }
 
   .descriptionevent {
-    height: 150px;
-    width: 65%;
+    height: 300px;
+    width: 90%;
     border-radius: 5px;
+    
   }
   .listevent {
     height: 200px;
@@ -284,41 +245,14 @@
     justify-content: center;
     flex-direction: row;
   }
-  .carteevent {
-    height: 450px;
-    width: 450px;
-  }
 
-  .navigationevent {
-    height: 450px;
-    width: 50px;
-  }
-}
-@media (min-width: 1200px) {
-  .carteevent {
-    height: 550px;
-    width: 550px;
-  }
-
-  .navigationevent {
-    height: 450px;
-    width: 50px;
-  }
 }
 
 @media (min-width: 1400px) {
   .search-resultsevent {
     height: 550px;
     width: 550px;
-    margin-top: 5%;
-  }
-  .carteevent {
-    height: 650px;
-    width: 650px;
+    margin-top: 2%;
   }
 
-  .navigationevent {
-    height: 650px;
-    width: 50px;
-  }
 }
