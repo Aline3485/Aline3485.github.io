@@ -1,12 +1,24 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable no-shadow */
+/* eslint-disable react/jsx-no-useless-fragment */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import "./EventQuard.css";
 
 const containerStyle = {
-  width: "400px",
-  height: "400px",
+  width: "350px",
+  height: "350px",
+  borderRadius: "20%",
+  marginTop: "4vh",
+  boxShadow: "0px 0px 227px -66px rgba(0, 0, 0, 0.87) inset",
+  border: "solid 2px",
 };
 function EventQuard() {
   const [details, setDetails] = useState();
@@ -47,8 +59,13 @@ function EventQuard() {
   }, []);
   return isLoaded ? (
     <>
-      <Link to={"/event"}>Back </Link>
+      <Link className="btnback" to="/event">Retour</Link>
       <div className="EventQuard">
+        {details?.images
+          .filter((image) => image.height === 576)
+          .map((newUrl) => (
+            <img key={newUrl.id} src={newUrl.url} alt="" className="picture" />
+          ))}
         <h1>{details?.name}</h1>
         <h2>
           Où : {details?._embedded.venues[0].address.line1}{" "}
@@ -61,12 +78,9 @@ function EventQuard() {
           Prix : entre {details?.priceRanges[0].min} et{" "}
           {details?.priceRanges[0].max} {details?.priceRanges[0].currency}
         </h3>
-        <a href={details?.url}> Billets </a>
-        {details?.images
-          .filter((image) => image.height === 576)
-          .map((newUrl) => (
-            <img key={newUrl.id} src={newUrl.url} alt="" />
-          ))}
+        <a className="btnbillet" href={details?.url}>
+          site vendeur de billet
+        </a>
         <div id="map">
           <GoogleMap
             mapContainerStyle={containerStyle}

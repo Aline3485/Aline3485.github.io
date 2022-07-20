@@ -1,48 +1,56 @@
-
-
 .event-containerevent {
   margin-top: 2%;
   padding: 4%;
   display: flex;
   align-items: center;
   width: 100%;
+
 }
-.gif{
+.navigationevent {
+  height: 50px;
+  width: 100%;
+  margin-top: 0%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.gif {
   width: 40px;
   animation: heartbeat 2s ease-in-out infinite both;
 }
 @keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-transform-origin: center center;
-            transform-origin: center center;
+    transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   10% {
     -webkit-transform: scale(0.91);
-            transform: scale(0.91);
+    transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   17% {
     -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   33% {
     -webkit-transform: scale(0.87);
-            transform: scale(0.87);
+    transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   45% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
 
@@ -96,7 +104,7 @@
   height: 20px;
   width: 100%;
   border: solid 2px black;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: white;
 }
 
@@ -105,11 +113,11 @@
   justify-content: center;
 }
 .descriptionevent {
-  background-color: rgb(255, 255, 255);
+  background-color: beige;
   height: 70vh;
   width: 90%;
   margin-bottom: 4%;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
   border: solid 2px black;
   scroll-behavior: smooth;
@@ -168,12 +176,12 @@
   }
 }
 
-
 .logo1 {
   height: 40px;
   width: 40px;
   background-color: aliceblue;
   border-radius: 100%;
+  border: solid 2px black;
 }
 
 .logo2 {
@@ -181,6 +189,7 @@
   width: 40px;
   background-color: aliceblue;
   border-radius: 100%;
+  border: solid 2px black;
 }
 
 .logo3 {
@@ -188,6 +197,7 @@
   width: 40px;
   background-color: aliceblue;
   border-radius: 100%;
+  border: solid 2px black;
 }
 
 @media (min-width: 390px) {
@@ -200,7 +210,6 @@
     flex-direction: column;
     align-items: center;
   }
-
 }
 
 @media (min-width: 700px) {
@@ -210,16 +219,20 @@
     flex-direction: row;
     align-items: center;
   }
-
 }
+.logo1{height: 60px;width: 60px;}
+
+.logo2{height: 60px;width: 60px;}
+
+.logo3{height: 60px;width: 60px;}
+
+
 
 @media (min-width: 915px) {
-.event{
-  width: 800px;
-}
-.searchevent{
-  width: 720px;
-}
+
+  .searchevent {
+    width: 720px;
+  }
   .remplissage {
     margin-top: 0%;
     display: flex;
@@ -227,22 +240,16 @@
   }
   .searchevent {
     height: 30px;
-    
-    border: solid 2px black;
-    border-radius: 5px;
   }
 
   .descriptionevent {
     height: 300px;
     width: 90%;
-    border-radius: 5px;
-    
   }
   .listevent {
     height: 200px;
     width: 30%;
     margin-left: 5px;
-    border-radius: 5px;
   }
 
   .contenueevent {
@@ -251,7 +258,6 @@
     justify-content: center;
     flex-direction: row;
   }
-
 }
 
 @media (min-width: 1400px) {
@@ -260,5 +266,4 @@
     width: 550px;
     margin-top: 2%;
   }
-
 }

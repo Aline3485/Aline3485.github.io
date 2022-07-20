@@ -18,11 +18,11 @@ root.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/event" element={<Event />} />
-          <Route path="/eventquard/:eventId" element={<EventQuard />}/>
+          <Route path="/eventquard/:eventId" element={<EventQuard />} />
           <Route path="/inscription" element={<Inscription />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </MyProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
