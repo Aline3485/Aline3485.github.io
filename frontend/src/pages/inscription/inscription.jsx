@@ -1,5 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable jsx-a11y/label-has-associated-control */
+
+import { SaveContext } from "@components/context/SaveContext";
 import React, { useContext } from "react";
 import { FormContext } from "../../components/context/FormContext";
 import Navbar from "../../Nav-Bar/Navbar";
@@ -15,15 +17,21 @@ const initialState = {
   codePostal: "",
   rue: "",
   numRue: "",
+  latitude: "",
+  longitude: "",
   price: "",
   nbrVisiteur: "",
   date: "",
   horaire: "",
   description: "",
 };
+
 function Inscription() {
   // utilisation du contexte
   const { form, setForm } = useContext(FormContext);
+  console.log(form);
+  const { save, setSave } = useContext(SaveContext);
+  console.log("reset", save);
 
   function handleChange(event) {
     // destructuration de event.target.value + event.target.name
@@ -39,6 +47,7 @@ function Inscription() {
     event.preventDefault();
     // eslint-disable-next-line no-alert
     alert("Votre formulaire a bien été envoyé !");
+    setSave(form);
     setForm(initialState);
   };
 
@@ -46,7 +55,7 @@ function Inscription() {
     <div>
       <div className=" barbody">
         <Navbar />
-        <div className="entete">Formulaire d'inscription</div>
+        <div className="entete">Crée ton event</div>
       </div>
       <form onSubmit={handleSubmit}>
         <div className="formulaire">
@@ -76,7 +85,8 @@ function Inscription() {
             <label>Votre email</label>
             <input
               className="inputInscription"
-              type="email"
+              type="text"
+              name="email"
               value={form.email}
               onChange={handleChange}
             />
@@ -136,6 +146,30 @@ function Inscription() {
             />
           </div>
         </div>
+
+        <div className="formulaire">
+          <div className="case">
+            <label>Latitude</label>
+            <input
+              className="inputInscription"
+              type="text"
+              name="latitude"
+              value={form.latitude}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="case">
+            <label>Longitude</label>
+            <input
+              className="inputInscription"
+              type="text"
+              name="longitude"
+              value={form.longitude}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+
         <div className="formulaire">
           <div className="case">
             <label>Prix</label>
@@ -173,7 +207,7 @@ function Inscription() {
             <label>Horaire</label>
             <input
               className="inputInscription"
-              type="tet"
+              type="text"
               name="horaire"
               value={form.horaire}
               onChange={handleChange}

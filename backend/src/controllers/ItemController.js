@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // const models = require("../models/index.js");
 
 // class ItemController {

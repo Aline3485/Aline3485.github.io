@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-no-constructed-context-values */
 import React from "react";
 import { createContext, useState } from "react";
 
@@ -20,12 +19,12 @@ const initialState = {
   horaire: "",
   description: "",
 };
-export const FormContext = createContext({ initialState });
-export default function MyProvider({ children }) {
-  const [form, setForm] = useState(initialState);
+export const SaveContext = createContext({ initialState });
+export default function MyResetProvider({ children }) {
+  const [save, setSave] = useState(initialState);
   return (
-    <FormContext.Provider value={{ form, setForm }}>
+    <SaveContext.Provider value={{ save, setSave }}>
       {children}
-    </FormContext.Provider>
+    </SaveContext.Provider>
   );
 }

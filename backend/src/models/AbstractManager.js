@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable max-len */
 // class AbstractManager {
 //   constructor(connection, table) {

@@ -4,7 +4,8 @@ import "./event.css";
 import React, { useState, useEffect } from "react";
 import DisplayList from "@components/DisplayList";
 import DetailsContext from "@components/context/DetailsContext";
-import Loupe from "../../assets/img/recherche.png"
+import Loupe from "../../assets/img/recherche.png";
+import DisplayEvents from "@components/DisplayEvent";
 
 function Event() {
   const [events, setEvents] = useState([]);
@@ -29,18 +30,16 @@ function Event() {
         <div className="remplissage">
           <div className="search-resultsevent">
             <div className="event-containerevent">
-              <input type="text" className="searchevent" /><img className="gif" src={Loupe} alt=""  />
+              <input type="text" className="searchevent" />
+              <img className="gif" src={Loupe} alt="" />
             </div>
             <div className="event">
               <div className="descriptionevent">
-                {" "}
+                <DisplayEvents />
                 <DetailsContext.Provider value={{ events }}>
-                 
-                    <DisplayList />
-                  
+                  <DisplayList />
                 </DetailsContext.Provider>
               </div>
-              
             </div>
           </div>
           {/* <div className="contenueevent">
