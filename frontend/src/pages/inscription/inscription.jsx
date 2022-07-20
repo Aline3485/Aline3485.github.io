@@ -46,7 +46,7 @@ function Inscription() {
     <div>
       <div className=" barbody">
         <Navbar />
-        <div className="entete">Formulaire d'inscription</div>
+        <div className="entete">Crée ton propre événement !</div>
       </div>
       <form onSubmit={handleSubmit}>
         <div className="formulaire">

@@ -37,8 +37,7 @@
   transition-duration: 0.4s;
   display: flex;
   align-items: center;
-  /* animation-duration: 1s;
-  animation-name: slidein */
+ 
 }
 
 .link {

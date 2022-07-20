@@ -1,13 +1,20 @@
 import Navbar from "../../Nav-Bar/Navbar";
 import axios from "axios";
 import "./event.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import DisplayList from "@components/DisplayList";
 import DetailsContext from "@components/context/DetailsContext";
-import Loupe from "../../assets/img/recherche.png"
+import Search from "@components/Search";
+import { FormContext } from "@components/context/FormContext";
+
 
 function Event() {
   const [events, setEvents] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+  console.log("searchVlue", searchValue)
+  function handleChange() {
+    searchValue(searchValue);
+  }
   useEffect(() => {
     axios
       .get(
@@ -21,26 +28,32 @@ function Event() {
         setEvents(data);
       });
   }, []);
-
+  const { form } = useContext(FormContext)
   return (
     <div>
       <div className=" eventbody">
         <Navbar />
         <div className="remplissage">
+         
           <div className="search-resultsevent">
             <div className="event-containerevent">
-              <input type="text" className="searchevent" /><img className="gif" src={Loupe} alt=""  />
+            <Search setSearchValue={setSearchValue} handleChange={handleChange} />
+            
             </div>
             <div className="event">
+           
               <div className="descriptionevent">
-                {" "}
+                {form.description}
+               
                 <DetailsContext.Provider value={{ events }}>
-                 
-                    <DisplayList />
-                  
+                                   
+                   
+                      <DisplayList searchValue={searchValue} />
+                    
                 </DetailsContext.Provider>
+                 
               </div>
-              
+             
             </div>
           </div>
           {/* <div className="contenueevent">

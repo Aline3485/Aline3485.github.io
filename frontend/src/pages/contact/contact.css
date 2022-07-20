@@ -19,7 +19,7 @@
   height: 100%;
   width: auto;
   justify-content: center;
-  border: 2px solid darkblue;
+  /* border: 2px solid darkblue; */
 }
 .form {
   display: flex;

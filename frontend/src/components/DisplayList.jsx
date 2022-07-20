@@ -1,13 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import DetailsContext from "@components/context/DetailsContext";
 import { Link } from "react-router-dom";
 
-function DisplayList() {
+
+function DisplayList({searchValue}) {
   const { events } = useContext(DetailsContext);
+ let eventList =searchValue ? events.filter(event => event.name.toLowerCase().startsWith(searchValue)) : events;
+ console.log(searchValue)
   return (
     <div className="DisplayList">
-      {events &&
-        events.map((event) => (
+       
+      {eventList &&
+        eventList
+        .map((event) => (
           <div key={event.id}>
             <h1>{event.name}</h1>
             <Link to={`/eventquard/${event.id}`}>
@@ -15,10 +20,12 @@ function DisplayList() {
                 .filter((image) => image.height === 115)
                 .map((newUrl, idx) => (
                   <img key={idx} src={newUrl.url} alt="" />
-                ))}
+                ))
+  }
             </Link>
           </div>
-        ))}
+        ))
+}
     </div>
   );
 }
