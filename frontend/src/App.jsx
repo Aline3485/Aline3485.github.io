@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import Accueil from "./pages/accueil/Accueil";
 import "./App.css";
 import Navbaraccueil from "./Nav-Bar/navbaraccueil";

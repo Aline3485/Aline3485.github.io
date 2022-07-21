@@ -8,11 +8,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   /* background-image: url(C:\Users\9606369F\Desktop\project2\creation-projet\src\img\arriéreplan.png);*/
-animation: color-change-4x 6s linear infinite alternate both;
+  animation: color-change-4x 6s linear infinite alternate both;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 
 @keyframes color-change-4x {
   0% {

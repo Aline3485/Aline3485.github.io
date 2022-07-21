@@ -34,54 +34,54 @@ function EventQuard() {
     lng: Number(details?._embedded.venues[0]?.location.longitude),
   };
 
-  console.log('center', center);
+  console.log("center", center);
   const [map, setMap] = React.useState(null);
-  const onLoad = marker => {
-    console.log('marker', marker);
-  }
+  const onLoad = (marker) => {
+    console.log("marker", marker);
+  };
 
   const onUnmount = React.useCallback(function callback(map) {
     setMap(null);
   }, []);
   return isLoaded ? (
     <>
-    <Link to={"/event"} >Back </Link>
-    <div className="EventQuard">
-      <h1>{details?.name}</h1>
-      <h2>
-        Où : {details?._embedded.venues[0].address.line1}{" "}
-        {details?._embedded.venues[0].postalCode}{" "}
-        {details?._embedded.venues[0].city.name} le{" "}
-        {details?.dates.start.localDate} à {details?.dates.start.localTime}
-      </h2>
-      <p>{details?.description}</p>
-      <h3>
-        Prix : entre {details?.priceRanges[0].min} et{" "}
-        {details?.priceRanges[0].max} {details?.priceRanges[0].currency}
-      </h3>
-      <a href={details?.url}> Billets </a>
-      {details?.images
-        .filter((image) => image.height === 576)
-        .map((newUrl) => (
-          <img key={newUrl.id} src={newUrl.url} alt="" />
-        ))}
-      <div id="map">
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={15}
-          onUnmount={onUnmount}
+      <Link to={"/event"}>Back </Link>
+      <div className="EventQuard">
+        <h1>{details?.name}</h1>
+        <h2>
+          Où : {details?._embedded.venues[0].address.line1}{" "}
+          {details?._embedded.venues[0].postalCode}{" "}
+          {details?._embedded.venues[0].city.name} le{" "}
+          {details?.dates.start.localDate} à {details?.dates.start.localTime}
+        </h2>
+        <p>{details?.description}</p>
+        <h3>
+          Prix : entre {details?.priceRanges[0].min} et{" "}
+          {details?.priceRanges[0].max} {details?.priceRanges[0].currency}
+        </h3>
+        <a href={details?.url}> Billets </a>
+        {details?.images
+          .filter((image) => image.height === 576)
+          .map((newUrl) => (
+            <img key={newUrl.id} src={newUrl.url} alt="" />
+          ))}
+        <div id="map">
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={15}
+            onUnmount={onUnmount}
           >
-          <Marker
-          onLoad={onLoad}
-          position={center}/>
-          {/* Child components, such as markers, info windows, etc. */}
-          <></>
-        </GoogleMap>
-        
+            <Marker onLoad={onLoad} position={center} />
+            {/* Child components, such as markers, info windows, etc. */}
+            <></>
+          </GoogleMap>
+        </div>
       </div>
-    </div>
-    </> ):<></>
+    </>
+  ) : (
+    <></>
+  );
 }
 
 export default EventQuard;

@@ -23,13 +23,12 @@ function Contact() {
     <>
       <Navbar />
 
-
       <div className="formContainer">
         <form className="formulaire2" onSubmit={handleSubmit}>
           <label className="formName" htmlFor="name">
-            Nom : 
+            Nom :
             <input
-            className= "inputName"
+              className="inputName"
               type="text"
               value={name}
               placeholder="doe"
@@ -39,7 +38,7 @@ function Contact() {
           <label className="formFirstname" htmlFor="firstname">
             Prénom :
             <input
-            className= "inputFirstname"
+              className="inputFirstname"
               type="text"
               value={firstname}
               placeholder="john"
@@ -49,26 +48,25 @@ function Contact() {
           <label className="formEmail" htmlFor="email">
             Email :
             <input
-            className= "inputEmail"
+              className="inputEmail"
               type="text"
               value={email}
               placeholder="prenom.nom@email.com"
               onChange={(event) => setEmail(event.target.value)}
             />
           </label>
-          
-          <div className="comment" >
-        <h3> Commentaires:</h3> 
-          <textarea
-            className="textarea"
-            value={inputs}
-            placeholder="vos commentaires"
-            onChange={(event) => setInputs(event.target.value)}
-          />
-          <input className="subButton" type="submit" value="Envoyer" />
+
+          <div className="comment">
+            <h3> Commentaires:</h3>
+            <textarea
+              className="textarea"
+              value={inputs}
+              placeholder="vos commentaires"
+              onChange={(event) => setInputs(event.target.value)}
+            />
+            <input className="subButton" type="submit" value="Envoyer" />
           </div>
         </form>
-       
       </div>
     </>
   );

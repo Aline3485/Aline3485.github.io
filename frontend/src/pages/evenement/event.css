@@ -1,47 +1,45 @@
-
-
 .event-containerevent {
   margin-top: 2%;
   padding: 4%;
   display: flex;
   align-items: center;
 }
-.gif{
+.gif {
   width: 40px;
   animation: heartbeat 2s ease-in-out infinite both;
 }
 @keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-transform-origin: center center;
-            transform-origin: center center;
+    transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   10% {
     -webkit-transform: scale(0.91);
-            transform: scale(0.91);
+    transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   17% {
     -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   33% {
     -webkit-transform: scale(0.87);
-            transform: scale(0.87);
+    transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   45% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
 
@@ -167,7 +165,6 @@
   }
 }
 
-
 .logo1 {
   height: 40px;
   width: 40px;
@@ -200,7 +197,6 @@
     flex-direction: column;
     align-items: center;
   }
-
 }
 
 @media (min-width: 700px) {
@@ -210,7 +206,6 @@
     flex-direction: row;
     align-items: center;
   }
-
 }
 
 @media (min-width: 915px) {
@@ -230,7 +225,6 @@
     height: 300px;
     width: 90%;
     border-radius: 5px;
-    
   }
   .listevent {
     height: 200px;
@@ -245,7 +239,6 @@
     justify-content: center;
     flex-direction: row;
   }
-
 }
 
 @media (min-width: 1400px) {
@@ -254,5 +247,4 @@
     width: 550px;
     margin-top: 2%;
   }
-
 }

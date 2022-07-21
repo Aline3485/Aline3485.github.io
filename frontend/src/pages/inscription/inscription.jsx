@@ -46,7 +46,9 @@ function Inscription() {
     <div>
       <div className=" barbody">
         <Navbar />
-        <div className="entete"><h1>Crée ton propre événement !</h1></div>
+        <div className="entete">
+          <h1>Crée ton propre événement !</h1>
+        </div>
       </div>
       <form onSubmit={handleSubmit}>
         <div className="formulaire">
@@ -191,9 +193,6 @@ function Inscription() {
           />
           <input type="submit" className="btn" />
         </div>
-       
-          
-        
       </form>
     </div>
   );

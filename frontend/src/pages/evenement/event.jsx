@@ -7,11 +7,10 @@ import DetailsContext from "@components/context/DetailsContext";
 import Search from "@components/Search";
 import { FormContext } from "@components/context/FormContext";
 
-
 function Event() {
   const [events, setEvents] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  console.log("searchVlue", searchValue)
+  console.log("searchVlue", searchValue);
   function handleChange() {
     searchValue(searchValue);
   }
@@ -28,32 +27,27 @@ function Event() {
         setEvents(data);
       });
   }, []);
-  const { form } = useContext(FormContext)
+  const { form } = useContext(FormContext);
   return (
     <div>
       <div className=" eventbody">
         <Navbar />
         <div className="remplissage">
-         
           <div className="search-resultsevent">
             <div className="event-containerevent">
-            <Search setSearchValue={setSearchValue} handleChange={handleChange} />
-            
+              <Search
+                setSearchValue={setSearchValue}
+                handleChange={handleChange}
+              />
             </div>
             <div className="event">
-           
               <div className="descriptionevent">
                 {form.description}
-               
+
                 <DetailsContext.Provider value={{ events }}>
-                                   
-                   
-                      <DisplayList searchValue={searchValue} />
-                    
+                  <DisplayList searchValue={searchValue} />
                 </DetailsContext.Provider>
-                 
               </div>
-             
             </div>
           </div>
           {/* <div className="contenueevent">

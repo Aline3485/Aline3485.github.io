@@ -9,9 +9,8 @@ import contact from "@assets/img/contact.png";
 function Navbaraccueil() {
   return (
     <nav className="barnav">
-  
       <ul className="liste">
-      <Link className="link" to="/">
+        <Link className="link" to="/">
           <img src={Logo} alt="" className="logo" />
         </Link>
         <Link className="link" to="/event">
