@@ -1,3 +1,5 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable import/no-unresolved */
 import React, { useContext } from "react";
 import DetailsContext from "@components/context/DetailsContext";
 import { Link } from "react-router-dom";

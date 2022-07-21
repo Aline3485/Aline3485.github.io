@@ -1,20 +1,21 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
-/* eslint-disable no-shadow */
-/* eslint-disable react/jsx-no-useless-fragment */
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-underscore-dangle */
-/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-no-useless-fragment */
+/* eslint-disable import/no-unresolved */
+
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import "./EventQuard.css";
+import taxi from "@assets/img/gg.png";
+import uber from "@assets/img/uber.png";
+import tinder from "@assets/img/tinder.png";
 
 const containerStyle = {
-  width: "350px",
-  height: "350px",
+  width: "80vw",
+  height: "80vw",
   borderRadius: "20%",
   marginTop: "4vh",
   boxShadow: "0px 0px 227px -66px rgba(0, 0, 0, 0.87) inset",
@@ -59,7 +60,11 @@ function EventQuard() {
   }, []);
   return isLoaded ? (
     <>
-      <Link className="btnback" to="/event">Retour</Link>
+      <div className="bouton">
+        <Link className="btnback" to="/event">
+          Retour
+        </Link>
+      </div>
       <div className="EventQuard">
         {details?.images
           .filter((image) => image.height === 576)
@@ -92,6 +97,11 @@ function EventQuard() {
             {/* Child components, such as markers, info windows, etc. */}
             <></>
           </GoogleMap>
+        </div>
+        <div className="navigationevent">
+          <img className="logo1" src={taxi} alt="" />
+          <img className="logo2" src={uber} alt="" />
+          <img className="logo3" src={tinder} alt="" />
         </div>
       </div>
     </>

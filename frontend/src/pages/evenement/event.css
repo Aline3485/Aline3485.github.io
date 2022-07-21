@@ -113,7 +113,7 @@
   justify-content: center;
 }
 .descriptionevent {
-  background-color: beige;
+  background-image: url('src/assets/img/paris.png');
   height: 70vh;
   width: 90%;
   margin-bottom: 4%;
@@ -122,6 +122,7 @@
   border: solid 2px black;
   scroll-behavior: smooth;
   overflow: auto;
+ 
 }
 .listevent {
   background-color: rgb(255, 255, 255);
@@ -176,29 +177,7 @@
   }
 }
 
-.logo1 {
-  height: 40px;
-  width: 40px;
-  background-color: aliceblue;
-  border-radius: 100%;
-  border: solid 2px black;
-}
 
-.logo2 {
-  height: 40px;
-  width: 40px;
-  background-color: aliceblue;
-  border-radius: 100%;
-  border: solid 2px black;
-}
-
-.logo3 {
-  height: 40px;
-  width: 40px;
-  background-color: aliceblue;
-  border-radius: 100%;
-  border: solid 2px black;
-}
 
 @media (min-width: 390px) {
   .search-resultsevent {
@@ -220,12 +199,6 @@
     align-items: center;
   }
 }
-.logo1{height: 60px;width: 60px;}
-
-.logo2{height: 60px;width: 60px;}
-
-.logo3{height: 60px;width: 60px;}
-
 
 
 @media (min-width: 915px) {

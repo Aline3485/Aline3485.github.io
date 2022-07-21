@@ -1,3 +1,8 @@
+/* eslint-disable import/order */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-shadow */
+/* eslint-disable react/jsx-no-constructed-context-values */
 import Navbar from "../../Nav-Bar/Navbar";
 import axios from "axios";
 import "./event.css";
@@ -17,7 +22,6 @@ function Event() {
 
       // Use this data to update the state
       .then((data) => {
-        console.log("test", data);
         setEvents(data);
       });
   }, []);
@@ -34,17 +38,12 @@ function Event() {
             </div>
             <div className="event">
               <div className="descriptionevent">
-                {" "}
+                <div className="descriptionbackground" />
                 <DetailsContext.Provider value={{ events }}>
                   <DisplayList />
                 </DetailsContext.Provider>
               </div>
             </div>
-          </div>
-          <div className="navigationevent">
-            <div className="logo1" />
-            <div className="logo2" />
-            <div className="logo3" />
           </div>
         </div>
       </div>
