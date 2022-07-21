@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import { GooglemapContext } from "./context/GooglemapContext";
 
 const containerStyle = {
   width: "400px",
@@ -35,7 +36,8 @@ function EventQuard() {
   };
 
   console.log("center", center);
-  const [map, setMap] = React.useState(null);
+  // const [map, setMap] = React.useState(null);
+  const { map, setMap } = useContext(GooglemapContext);
   const onLoad = (marker) => {
     console.log("marker", marker);
   };

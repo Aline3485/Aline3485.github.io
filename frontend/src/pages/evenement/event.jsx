@@ -6,6 +6,8 @@ import DisplayList from "@components/DisplayList";
 import DetailsContext from "@components/context/DetailsContext";
 import Search from "@components/Search";
 import { FormContext } from "@components/context/FormContext";
+import Loupe from "../../assets/img/recherche.png";
+import DisplayEvents from "@components/DisplayEvent";
 
 function Event() {
   const [events, setEvents] = useState([]);
@@ -35,6 +37,7 @@ function Event() {
         <div className="remplissage">
           <div className="search-resultsevent">
             <div className="event-containerevent">
+            <div className="search-resultsevent">
               <Search
                 setSearchValue={setSearchValue}
                 handleChange={handleChange}
@@ -42,24 +45,17 @@ function Event() {
             </div>
             <div className="event">
               <div className="descriptionevent">
-                {form.description}
-
+                <DisplayEvents />
                 <DetailsContext.Provider value={{ events }}>
-                  <DisplayList searchValue={searchValue} />
-                </DetailsContext.Provider>
+                  <DisplayList searchValue={searchValue} >
+              <input type="text" className="searchevent" />
+              <img className="gif" src={Loupe} alt="" />
+              </DisplayList>
+              </DetailsContext.Provider>
+                </div>
               </div>
-            </div>
           </div>
-          {/* <div className="contenueevent">
-          <div className="carteevent">
-            <div className="mapevent" />
-          </div> */}
-          {/* <div className="navigationevent">
-            <div className="logo1" />
-            <div className="logo2" />
-            <div className="logo3" />
-          </div> */}
-          {/* </div> */}
+        </div>
         </div>
       </div>
     </div>
