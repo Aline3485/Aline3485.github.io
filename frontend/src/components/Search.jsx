@@ -1,10 +1,11 @@
 import React from "react";
-import Loupe from "../../src/assets/img/recherche.png";
+import Loupe from "@assets/image/recherche.png";
+import "@pages/evenement/event.css";
 function Search(props) {
   const { searchValue, setSearchValue } = props;
   return (
-    <div>
-      <input
+    <div className="event-containerevent">
+      <input className="searchevent"
         value={searchValue}
         type="text"
         placeholder="Type here..."

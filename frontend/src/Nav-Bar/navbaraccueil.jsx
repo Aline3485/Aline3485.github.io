@@ -1,10 +1,10 @@
 import React from "react";
 import "./navbaraccueil.css";
 import { Link } from "react-router-dom";
-import Logo from "@assets/img/Logo.png";
-import concert from "@assets/img/concert.png";
-import inscription from "@assets/img/ajouter-le-fichier.png";
-import contact from "@assets/img/contact.png";
+import Logo from "@assets/image/Logo.png";
+import concert from "@assets/image/concert.png";
+import inscription from "@assets/image/ajouter-le-fichier.png";
+import contact from "@assets/image/contact.png";
 
 function Navbaraccueil() {
   return (

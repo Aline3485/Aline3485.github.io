@@ -1,8 +1,7 @@
 nav {
   height: 50px;
   opacity: 0.8;
-  position: absolute;
-
+  position: fixed;
   bottom: 0px;
   width: 100%;
   z-index: 998;
@@ -18,7 +17,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+
 }
 
 .logo {

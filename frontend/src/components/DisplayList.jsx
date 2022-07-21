@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import DetailsContext from "@components/context/DetailsContext";
 import { Link } from "react-router-dom";
-import "./DisplayList.css";
+import "@pages/evenement/event.css";
 
 
 function DisplayList({searchValue}) {

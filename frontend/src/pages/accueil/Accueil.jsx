@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "@assets/img/logoaccueil.png";
+import Logo from "@assets/image/logoaccueil.png";
 import "./Accueil.css";
 
 function Accueil() {

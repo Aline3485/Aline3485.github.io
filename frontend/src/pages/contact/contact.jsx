@@ -58,7 +58,7 @@ function Contact() {
           </label>
 
           <div className="comment">
-            <h3> Commentaires:</h3>
+            <h3 className="com"> Commentaires:</h3>
             <textarea
               className="textarea"
               value={inputs}

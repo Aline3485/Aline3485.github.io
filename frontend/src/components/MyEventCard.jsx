@@ -4,11 +4,15 @@ import { Link } from "react-router-dom";
 import { GooglemapContext } from "./context/GooglemapContext";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import { SaveContext } from "./context/SaveContext";
-
+import "@components/MyEventCard.css";
 // Taille de la Google map
 const containerStyle = {
-  width: "400px",
-  height: "400px",
+  width: "80vw",
+  height: "80vw",
+  borderRadius: "20%",
+  marginTop: "4vh",
+  boxShadow: "0px 0px 227px -66px rgba(0, 0, 0, 0.87) inset",
+  border: "solid 2px",
 };
 
 function MyEventCard() {
@@ -33,16 +37,23 @@ function MyEventCard() {
   }, []);
   return isLoaded ? (
     <>
-      <Link to={"/event"}>Back </Link>
-      <div className="CreateEventCard">
-        <h1>{save.nameEvent}</h1>
-        <h2>
+        <div className="bouton">
+        <Link className="btnback" to="/event">
+          Retour
+        </Link>
+      </div>
+      <div className="EventQuard">
+        <h1 className="titreeventcard">{save.nameEvent}</h1>
+        <h2 className="prixevent">
           {`Où: ${save.numRue} ${save.rue} ${save.ville} ${save.codePostal} le ${save.date} à ${save.horaire}`}
         </h2>
-        <p>{save.description}</p>
+        <p className="paragraph">{save.description}</p>
         <h3>Prix : {save.price}</h3>
         <h3>{`Capacité max: ${save.nbrVisiteur} personnes`}</h3>
         <h3>Contact: {save.email}</h3>
+        <a className="btnbillet">
+          site vendeur de billet
+        </a>
         <div id="map">
           <GoogleMap
             mapContainerStyle={containerStyle}

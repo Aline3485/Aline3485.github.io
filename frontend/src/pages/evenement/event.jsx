@@ -11,7 +11,7 @@ import DisplayList from "@components/DisplayList";
 import DetailsContext from "@components/context/DetailsContext";
 import Search from "@components/Search";
 import { FormContext } from "@components/context/FormContext";
-import Loupe from "../../assets/img/recherche.png";
+import Loupe from "@assets/image/recherche.png";
 import DisplayEvents from "@components/DisplayEvent";
 
 function Event() {
@@ -39,21 +39,17 @@ function Event() {
       <div className=" eventbody">
         <Navbar />
         <div className="remplissage">
+          <h1 className="titreevent">ÉVÉNEMENTS</h1>
           <div className="search-resultsevent">
-            <div className="event-containerevent">
-            <div className="search-resultsevent">
-              <Search
+              <Search  
                 setSearchValue={setSearchValue}
                 handleChange={handleChange}
               />
-            </div>
             <div className="event">
               <div className="descriptionevent">
                 <DisplayEvents />
                 <DetailsContext.Provider value={{ events }}>
                   <DisplayList searchValue={searchValue} >
-              <input type="text" className="searchevent" />
-              <img className="gif" src={Loupe} alt="" />
               </DisplayList>
               </DetailsContext.Provider>
                 </div>
@@ -62,7 +58,7 @@ function Event() {
         </div>
         </div>
       </div>
-    </div>
+    
   );
 }
 

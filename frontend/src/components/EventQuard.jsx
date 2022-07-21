@@ -9,14 +9,10 @@ import { GooglemapContext } from "./context/GooglemapContext";
 /* eslint-disable react/jsx-no-useless-fragment */
 /* eslint-disable import/no-unresolved */
 
-import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import axios from "axios";
-import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import "./EventQuard.css";
-import taxi from "@assets/img/gg.png";
-import uber from "@assets/img/uber.png";
-import tinder from "@assets/img/tinder.png";
+import taxi from "@assets/image/gg.png";
+import uber from "@assets/image/uber.png";
+import tinder from "@assets/image/tinder.png";
 
 const containerStyle = {
   width: "80vw",
@@ -77,15 +73,15 @@ function EventQuard() {
           .map((newUrl) => (
             <img key={newUrl.id} src={newUrl.url} alt="" className="picture" />
           ))}
-        <h1>{details?.name}</h1>
-        <h2>
+        <h1 className="titreeventcard">{details?.name}</h1>
+        <h2 className="ou">
           Où : {details?._embedded.venues[0].address.line1}{" "}
           {details?._embedded.venues[0].postalCode}{" "}
           {details?._embedded.venues[0].city.name} le{" "}
           {details?.dates.start.localDate} à {details?.dates.start.localTime}
         </h2>
-        <p>{details?.description}</p>
-        <h3>
+        <p className='paragraph'>{details?.description}</p>
+        <h3 className="prixevent">
           Prix : entre {details?.priceRanges[0].min} et{" "}
           {details?.priceRanges[0].max} {details?.priceRanges[0].currency}
         </h3>
