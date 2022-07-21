@@ -8,6 +8,7 @@ import "./navbar.css";
 
 function Navbar() {
   return (
+    <div className="navbarcontainer">
     <nav>
       <ul className="list">
       <Link className="lin" to="/">
@@ -24,6 +25,7 @@ function Navbar() {
         </Link>
       </ul>
     </nav>
+    </div>
   );
 }
 export default Navbar;

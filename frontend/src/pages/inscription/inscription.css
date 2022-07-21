@@ -2,6 +2,7 @@
   text-align: center;
   font-size: x-large;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
 }
 form {
   border-radius: 10px;
@@ -11,6 +12,7 @@ form {
   background-color: #1556e2;
   padding: 5px;
   box-shadow: inset 0px 0px 13px 1px rgba(0, 0, 0, 0.89);
+ 
 }
 @keyframes flicker-in-1 {
   0% {
@@ -117,11 +119,42 @@ label {
   color: white;
 }
 .formulaire {
-  animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
   display: flex;
   flex-direction: column;
   margin: 5px;
   font-size: medium;
+  
+
+}
+.case2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.case, .case2,  .formulaire {
+animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
+
+}
+
+.btn {
+  width: 75px;
+  height: 24px;
+  align-self: center;
+  box-shadow: 3px 4px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family:Arial;
+	font-size:13px;
+	padding:5px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
 }
 
 @keyframes fade-in-fwd {
@@ -142,8 +175,11 @@ label {
   border-radius: 40px;
 }
 #description {
+
   border: 5px double #391ca4;
-  border-radius: 0px 40px 0px 40px;
+  border-radius: 0px 15px 0px 15px;
+  width: 90%;
+  height: 150px;
 }
 
 @media (min-width: 450px) {
@@ -172,17 +208,5 @@ label {
     transition-duration: 0.3s;
     background-color: coral;
   }
-  .btn {
-    width: 100px;
-    height: 50px;
-    margin-top: 10px;
-    border-radius: 50px;
-  }
-  .btn:hover {
-    width: 101px;
-    height: 51px;
-    transition-duration: 0.5s;
-    background-color: red;
-    color: white;
-  }
+
 }

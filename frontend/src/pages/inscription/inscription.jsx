@@ -46,7 +46,7 @@ function Inscription() {
     <div>
       <div className=" barbody">
         <Navbar />
-        <div className="entete">Crée ton propre événement !</div>
+        <div className="entete"><h1>Crée ton propre événement !</h1></div>
       </div>
       <form onSubmit={handleSubmit}>
         <div className="formulaire">
@@ -180,19 +180,20 @@ function Inscription() {
             />
           </div>
         </div>
-        <div className="case">
-          <label>Description</label>
+        <div className="case2">
+          <label>Description (Max 500 caractères)</label>
           <textarea
             id="description"
-            maxLength={200}
+            maxLength={500}
             name="description"
             value={form.description}
             onChange={handleChange}
           />
-        </div>
-        <div className="case">
           <input type="submit" className="btn" />
         </div>
+       
+          
+        
       </form>
     </div>
   );

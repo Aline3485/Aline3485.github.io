@@ -1,31 +1,29 @@
-.cubeContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-}
-.cube {
-  height: 50px;
-  width: 50px;
-  background: linear-gradient(45deg, rgba(1, 1, 187, 0.47), rgb(3, 4, 47));
-  box-shadow: 0 0 0 0 rgb(1 1 187 / 47%);
-  border-radius: 10px;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-duration: 8s;
-}
 .formContainer {
   display: flex;
-  height: 100%;
+
   width: auto;
   justify-content: center;
-  /* border: 2px solid darkblue; */
+
 }
-.form {
+.formulaire2 {
   display: flex;
   flex-direction: column;
+  height: 400px;
 }
 
+.inputName{
+  margin: 5px 15px 10px 15px;
+  width: 70%;
+}
+.inputEmail {
+  margin: 10px 15px 10px 13px;
+  width: 70%;
+}
+
+.inputFirstname {
+  margin: 10px 10px 10px 12px;
+  width: 70%;
+}
 input,
 textarea,
 .subButton {
@@ -33,12 +31,95 @@ textarea,
   margin: 4px;
 }
 
+.comment {
+ margin-top: 10px;
+display: flex;
+flex-direction: column;
+}
+
+h3 {
+  color: white;
+}
 .textarea {
-  resize: none;
-  height: 100px;
+  border: 5px double #391ca4;
+  border-radius: 0px 15px 0px 15px;
+  height:150px;
 }
 .subButton {
   width: 75px;
   height: 24px;
   align-self: center;
+  box-shadow: 3px 4px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family:Arial;
+	font-size:13px;
+	padding:5px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+
+@media (min-width: 768px) {
+
+  .formContainer {
+    display: flex;
+    height: 100%;
+    width: auto;
+    justify-content: center;
+    margin-top: 20px;
+  
+  }
+  .formulaire2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 11px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 11px 5px 15px 5px rgba(0,0,0,0);
+  }
+  
+  .formName {
+    margin-top: 20px;
+  }
+  label {
+    margin-left: 20px;
+  }
+  .inputName{
+    margin: 5px 15px 20px 35px;
+    width: 70%;
+  }
+  .inputEmail {
+    margin: 5px 15px 20px 30px;
+    width: 70%;
+  }
+  
+  .inputFirstname {
+    margin: 5px 10px 20px 15px;
+    width: 70%;
+  }
+  
+  textarea,
+  .subButton {
+    font-family: "Open Sans", sans-serif;
+    margin: 20px;
+  }
+  .comment{
+    margin-top: 5px ;
+    display:flex;
+    flex-direction: column;
+  }
+  .subButton {
+    justify-content: flex-end;
+  }
+  .textarea {
+    resize: none;
+    height: 150px;
+    width: 90%;
+  }
+  
 }
