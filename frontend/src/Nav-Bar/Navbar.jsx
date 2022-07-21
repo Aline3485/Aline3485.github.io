@@ -4,7 +4,7 @@ import Logo from "@assets/image/Logo.png";
 import concert from "@assets/image/concert.png";
 import inscription from "@assets/image/ajouter-le-fichier.png";
 import contact from "@assets/image/contact.png";
-import "./navbar.css";
+import "./Navbar.css";
 
 function Navbar() {
   return (
