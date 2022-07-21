@@ -1,3 +1,8 @@
+/* eslint-disable import/order */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-shadow */
+/* eslint-disable react/jsx-no-constructed-context-values */
 import Navbar from "../../Nav-Bar/Navbar";
 import axios from "axios";
 import "./event.css";
@@ -25,7 +30,6 @@ function Event() {
 
       // Use this data to update the state
       .then((data) => {
-        console.log("test", data);
         setEvents(data);
       });
   }, []);

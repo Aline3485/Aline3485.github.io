@@ -1,6 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import React, { useState } from "react";
 import Navbar from "../../Nav-Bar/Navbar";
-// import Logo from "../../img/logoaccueil.png";
+
 import "./contact.css";
 
 function Contact() {

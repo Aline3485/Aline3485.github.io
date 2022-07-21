@@ -1,14 +1,22 @@
+.name{color: rgb(255, 255, 255);}
+
 .EventQuard {
+ border-radius: 10px;
+ margin-top: 5%;
+ margin-left: 5%;
+ margin-right: 5%;
+ margin-bottom: 5%;
+  padding: 5%;
+  background-color: cornsilk;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-}
-.description {
-  padding: 5%;
 }
 h1 {
   margin-top: 5%;
-  font-size: x-small;
+  font-size: large;
   text-align: center;
 }
 h2 {
@@ -18,10 +26,79 @@ h2 {
 p {
   margin-top: 5%;
   font-size: 50%;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+.bouton{
+  background-color: coral;
+  border-radius: 0px 20px 20px 20px;
+font-size: xx-small;
+ margin-top: 10px;
+ margin-left: 10px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ height: 40px;
+ width: 40px;
+ transition-duration: 1s;
+}
+.btnback{
+  color: black;; text-decoration: none;
+}
+.bouton:hover{
+transform: rotate(-45deg);
+background-color: red;
+}
+
+.btnbillet {
+  background-color: darkorange;
+  border-radius: 20px;
+  text-decoration: none;
+  height: 40px;
+  width: 150px;
+  font-size: xx-small;
+  color: aliceblue;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.btnbillet:hover{
+  animation: color-change 1s linear infinite alternate both;
+}
+
+@keyframes color-change {
+  0% {
+    background: rgb(0, 0, 111);
+  }
+  33.3333% {
+    background: rgb(0, 181, 21);
+  }
+  66.666% {
+    background: rgb(220, 97, 4);
+  }
+  100% {
+    background: rgb(155, 0, 104);
+  }
 }
 .picture {
-  width: 90%;
-  margin-top: 5%;
+  width: 50%;
+  margin-top: -10%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 18px 14px rgba(0,0,0,0.88);
 }
 h3 {
   margin-top: 5%;
@@ -30,10 +107,7 @@ h3 {
 .carteevent {
   height: 325px;
   width: 325px;
-  background-color: rgba(201, 126, 35, 0.484);
-  box-shadow: 0px 0px 227px -66px rgba(62, 84, 196, 0.87) inset;
   margin-top: 5%;
-  border: thick double;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,69 +119,59 @@ h3 {
   width: 95%;
   background-color: white;
   border-radius: 100%;
+  
   box-shadow: 0px 0px 227px -66px rgba(0, 0, 0, 0.87) inset;
 }
-.navigationevent {
-  margin-top: 5%;
-  height: 325px;
-  width: 50px;
-  background-color: rgba(198, 132, 9, 0);
-  box-shadow: 0px 0px 227px -66px rgba(198, 132, 9, 0.436) inset;
-  border: thick double;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 5px;
+.logo1 {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  border: solid 2px black;
+  
+  animation: bounce-in-left 1.1s 2.5s both;
+}
+
+.logo2 {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  border: solid 2px black;
+ 
+  animation: bounce-in-left 1.1s 2s both;
+}
+
+.logo3 {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  border: solid 2px black;
+  
+  animation: bounce-in-left 1.1s 1.5s both;
 }
 @media (min-width: 390px) {
-  .navigationevent {
-    height: 350px;
-    width: 350px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .navigation {
-    height: 50px;
-    width: 350px;
-    margin-top: 0%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
+
 }
 @media (min-width: 700px) {
   .carteevent {
     height: 550px;
     width: 550px;
-
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .navigationevent {
-    height: 550px;
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 5%;
+  .searchevent {
+    height: 40px;
+    width: 90%;
   }
+  
 }
 @media (min-width: 915px) {
-  .carteevent {
-    height: 450px;
-    width: 450px;
-  }
 
-  .navigationevent {
-    height: 450px;
-    width: 50px;
-  }
+.remplissage{
+  flex-direction: column;
+}
+
 }
 @media (min-width: 1200px) {
   .carteevent {
@@ -115,10 +179,6 @@ h3 {
     width: 550px;
   }
 
-  .navigationevent {
-    height: 450px;
-    width: 50px;
-  }
 }
 
 @media (min-width: 1400px) {
@@ -127,8 +187,4 @@ h3 {
     width: 650px;
   }
 
-  .navigationevent {
-    height: 650px;
-    width: 50px;
-  }
 }

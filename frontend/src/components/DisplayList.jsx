@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import DetailsContext from "@components/context/DetailsContext";
 import { Link } from "react-router-dom";
+import "./DisplayList.css";
 
 
 function DisplayList({searchValue}) {
@@ -14,7 +15,7 @@ function DisplayList({searchValue}) {
         eventList
         .map((event) => (
           <div key={event.id}>
-            <h1>{event.name}</h1>
+            <h1 className="name">{event.name}</h1>
             <Link to={`/eventquard/${event.id}`}>
               {event.images
                 .filter((image) => image.height === 115)
