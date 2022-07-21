@@ -3,10 +3,28 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import { GooglemapContext } from "./context/GooglemapContext";
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable react/jsx-no-useless-fragment */
+/* eslint-disable import/no-unresolved */
+
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import axios from "axios";
+import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import "./EventQuard.css";
+import taxi from "@assets/img/gg.png";
+import uber from "@assets/img/uber.png";
+import tinder from "@assets/img/tinder.png";
 
 const containerStyle = {
-  width: "400px",
-  height: "400px",
+  width: "80vw",
+  height: "80vw",
+  borderRadius: "20%",
+  marginTop: "4vh",
+  boxShadow: "0px 0px 227px -66px rgba(0, 0, 0, 0.87) inset",
+  border: "solid 2px",
 };
 function EventQuard() {
   const [details, setDetails] = useState();
@@ -42,13 +60,23 @@ function EventQuard() {
     console.log("marker", marker);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const onUnmount = React.useCallback(function callback(map) {
     setMap(null);
   }, []);
   return isLoaded ? (
     <>
-      <Link to={"/event"}>Back </Link>
+      <div className="bouton">
+        <Link className="btnback" to="/event">
+          Retour
+        </Link>
+      </div>
       <div className="EventQuard">
+        {details?.images
+          .filter((image) => image.height === 576)
+          .map((newUrl) => (
+            <img key={newUrl.id} src={newUrl.url} alt="" className="picture" />
+          ))}
         <h1>{details?.name}</h1>
         <h2>
           Où : {details?._embedded.venues[0].address.line1}{" "}
@@ -61,12 +89,9 @@ function EventQuard() {
           Prix : entre {details?.priceRanges[0].min} et{" "}
           {details?.priceRanges[0].max} {details?.priceRanges[0].currency}
         </h3>
-        <a href={details?.url}> Billets </a>
-        {details?.images
-          .filter((image) => image.height === 576)
-          .map((newUrl) => (
-            <img key={newUrl.id} src={newUrl.url} alt="" />
-          ))}
+        <a className="btnbillet" href={details?.url}>
+          site vendeur de billet
+        </a>
         <div id="map">
           <GoogleMap
             mapContainerStyle={containerStyle}
@@ -78,6 +103,11 @@ function EventQuard() {
             {/* Child components, such as markers, info windows, etc. */}
             <></>
           </GoogleMap>
+        </div>
+        <div className="navigationevent">
+          <img className="logo1" src={taxi} alt="" />
+          <img className="logo2" src={uber} alt="" />
+          <img className="logo3" src={tinder} alt="" />
         </div>
       </div>
     </>
